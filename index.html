@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japon 2026 · carte</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>
+:root{
+  --paper:#faf7f2; --card:#fff; --ink:#26262e; --ink2:#54525c; --muted:#827d78;
+  --line:#e7e0d6; --line2:#f1ece4; --gold:#9a7420;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#141416;--card:#1d1d20;--ink:#f0eeea;--ink2:#c3c0bb;--muted:#94908b;
+        --line:#333236;--line2:#28282c;--gold:#d8b45e}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:ui-serif,Georgia,'Iowan Old Style','Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-text-size-adjust:100%}
+.sans{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif}
+header.cover{background:linear-gradient(150deg,#241d3a,#3d2a4d 42%,#6b2f3d);color:#fff;padding:36px 20px 28px;text-align:center;position:relative;overflow:hidden}
+header.cover::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 8%,rgba(255,255,255,.13),transparent 55%)}
+header.cover>*{position:relative;z-index:1}
+.jp{font-size:.7rem;letter-spacing:8px;opacity:.6;margin-bottom:10px}
+h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-spacing:-.4px}
+.dates{margin-top:8px;font-size:.92rem;opacity:.9;font-family:ui-sans-serif,sans-serif}
+.langbar{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.langbar button{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:.78rem;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 16px;cursor:pointer}
+.langbar button[aria-pressed="true"]{background:#fff;color:#3d2a4d;border-color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:18px 16px 60px}
+#map{width:100%;height:64vh;min-height:360px;border-radius:13px;border:1px solid var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin:14px 0 22px;font-family:ui-sans-serif,sans-serif;font-size:.78rem;color:var(--ink2)}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.dayrow{background:var(--card);border:1px solid var(--line);border-radius:11px;margin-bottom:8px;padding:11px 14px;display:flex;align-items:center;gap:12px;cursor:pointer}
+.dayrow:hover{background:var(--line2)}
+.dayrow .dn{flex:0 0 auto;width:34px;height:34px;border-radius:9px;color:#fff;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,sans-serif;font-weight:800;font-size:.82rem}
+.dayrow .dt{flex:1;min-width:0}
+.dayrow .t{display:block;font-weight:600;font-size:.94rem}
+.dayrow .d{display:block;font-size:.74rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;margin-top:1px}
+.popupbox{font-family:ui-sans-serif,-apple-system,sans-serif;max-width:230px}
+.popupbox h3{font-family:ui-serif,Georgia,serif;font-size:.98rem;margin:2px 0 2px;color:#222}
+.popupbox .pd{font-size:.72rem;font-weight:700;letter-spacing:.4px;color:var(--gold);margin-bottom:6px}
+.popupbox ul{list-style:none;padding-left:0;margin-top:4px}
+.popupbox li{font-size:.8rem;color:#444;padding:3px 0 3px 13px;position:relative;border-bottom:1px solid #eee}
+.popupbox li:last-child{border:none}
+.popupbox li::before{content:"—";position:absolute;left:0;color:#999}
+.sectitle{font-family:ui-sans-serif,sans-serif;font-size:.85rem;font-weight:700;color:var(--muted);margin:26px 0 10px;text-transform:uppercase;letter-spacing:.5px}
+footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;line-height:1.6;text-align:center}
+.leaflet-popup-content-wrapper{border-radius:10px}
+.ppics{display:flex;gap:5px;margin-top:9px;flex-wrap:wrap}
+.ppics img{width:52px;height:52px;object-fit:cover;border-radius:6px;cursor:pointer;border:1px solid #ddd;display:block}
+.pcount{display:inline-flex;align-items:center;gap:3px;font-size:.7rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;margin-left:6px}
+#lightbox{position:fixed;inset:0;background:rgba(10,10,12,.92);display:none;align-items:center;justify-content:center;z-index:9999;padding:24px;flex-direction:column}
+#lightbox.show{display:flex}
+#lightbox img{max-width:92vw;max-height:76vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+#lightbox .lb-cap{color:#eee;font-family:ui-sans-serif,sans-serif;font-size:.82rem;margin-top:12px;text-align:center}
+#lightbox .lb-bar{position:absolute;top:16px;right:18px;display:flex;gap:10px}
+#lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;width:42px;height:42px;border-radius:50%;font-size:1.2rem;cursor:pointer}
+#lightbox .lb-prev{left:14px}
+#lightbox .lb-next{right:14px}
+#lightbox .lb-close{background:rgba(255,255,255,.12);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:1rem;cursor:pointer}
+</style>
+</head>
+<body>
+<header class="cover">
+  <div class="jp">日 本 旅 行</div>
+  <h1 id="c-title"></h1>
+  <p class="dates" id="c-sub"></p>
+  <div class="langbar" id="langbar"></div>
+</header>
+<div class="wrap">
+  <div id="map"></div>
+  <div class="legend" id="legend"></div>
+  <div class="sectitle" id="sec-days"></div>
+  <div id="daylist"></div>
+  <footer id="foot"></footer>
+</div>
+
+<div id="lightbox">
+  <div class="lb-bar"><button class="lb-close" onclick="closeLightbox()">✕</button></div>
+  <button class="lb-nav lb-prev" onclick="stepLightbox(-1)">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-nav lb-next" onclick="stepLightbox(1)">›</button>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+const UI = {
+  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique. Les tracés entre les étapes sont indicatifs, pas un relevé GPS réel.'},
+  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting. Lines between stops are indicative, not an actual GPS log.'},
+  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost. De lijnen tussen de etappes zijn indicatief, geen echte GPS-registratie.'}
+};
+let lang = 'fr';
+let DATA = null;
+let map, markers = [], polyline;
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+
+function popupHtml(p, idx){
+  const items = p.items.map(i => `<li>${esc(i[lang])}</li>`).join('');
+  const pics = (p.photos && p.photos.length)
+    ? `<div class="ppics">${p.photos.map((src,i) => `<img src="${esc(src)}" loading="lazy" onclick="openLightbox(${idx},${i})" alt="">`).join('')}</div>`
+    : '';
+  return `<div class="popupbox">
+    <div class="pd">${esc(p.date[lang])} · ${esc(p.place[lang])}</div>
+    <h3>${esc(p.title[lang])}</h3>
+    <ul>${items}</ul>
+    ${pics}
+  </div>`;
+}
+
+function renderHeader(){
+  document.documentElement.lang = lang;
+  document.getElementById('c-title').textContent = DATA.trip.title[lang];
+  document.getElementById('c-sub').textContent = DATA.trip.sub[lang];
+  document.getElementById('langbar').innerHTML = ['fr','en','nl']
+    .map(l => `<button type="button" data-l="${l}" aria-pressed="${l===lang}">${l.toUpperCase()}</button>`).join('');
+  document.querySelectorAll('#langbar button').forEach(b => b.onclick = () => { lang = b.dataset.l; renderAll(); });
+  document.getElementById('foot').textContent = UI[lang].foot;
+  document.getElementById('sec-days').textContent = UI[lang].days;
+}
+
+function renderLegend(){
+  document.getElementById('legend').innerHTML = Object.entries(DATA.legend)
+    .filter(([k]) => k !== 'vol')
+    .map(([k,v]) => `<span><i style="background:${v.color}"></i>${esc(v.name[lang])}</span>`).join('');
+}
+
+function renderDayList(){
+  document.getElementById('daylist').innerHTML = DATA.points.map((p,idx) => `
+    <div class="dayrow" data-idx="${idx}">
+      <span class="dn" style="background:${p.color}">${p.n}</span>
+      <span class="dt">
+        <span class="t">${esc(p.title[lang])}${p.photos && p.photos.length ? `<span class="pcount">📷 ${p.photos.length}</span>` : ''}</span>
+        <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}</span>
+      </span>
+    </div>`).join('');
+  document.querySelectorAll('.dayrow').forEach(row => row.onclick = () => {
+    const idx = +row.dataset.idx;
+    const p = DATA.points[idx];
+    map.flyTo([p.lat, p.lon], 8, {duration:.6});
+    markers[idx].openPopup();
+  });
+}
+
+function renderMarkers(){
+  DATA.points.forEach((p, idx) => {
+    markers[idx].setPopupContent(popupHtml(p, idx));
+  });
+}
+
+function initMap(){
+  map = L.map('map', {scrollWheelZoom:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  const latlngs = DATA.points.map(p => [p.lat, p.lon]);
+  polyline = L.polyline(latlngs, {color:'#9a7420', weight:2, dashArray:'5 7', opacity:.6}).addTo(map);
+
+  DATA.points.forEach((p, idx) => {
+    const icon = L.divIcon({
+      className: '',
+      html: `<div style="background:${p.color};width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;color:#fff;font:700 11px ui-sans-serif,sans-serif">${p.n}</div>`,
+      iconSize: [26,26], iconAnchor: [13,13], popupAnchor: [0,-13]
+    });
+    const m = L.marker([p.lat, p.lon], {icon}).addTo(map).bindPopup(popupHtml(p, idx));
+    markers.push(m);
+  });
+
+  map.fitBounds(polyline.getBounds(), {padding:[30,30]});
+}
+
+function renderAll(){
+  renderHeader();
+  renderLegend();
+  renderDayList();
+  renderMarkers();
+}
+
+let lb = {pointIdx:null, photoIdx:0};
+
+function showLightboxImage(){
+  const p = DATA.points[lb.pointIdx];
+  const src = p.photos[lb.photoIdx];
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-cap').textContent = `${p.title[lang]} — ${p.date[lang]} (${lb.photoIdx+1}/${p.photos.length})`;
+}
+window.openLightbox = function(pointIdx, photoIdx){
+  lb.pointIdx = pointIdx; lb.photoIdx = photoIdx;
+  showLightboxImage();
+  document.getElementById('lightbox').classList.add('show');
+};
+window.closeLightbox = function(){
+  document.getElementById('lightbox').classList.remove('show');
+};
+window.stepLightbox = function(dir){
+  const p = DATA.points[lb.pointIdx];
+  lb.photoIdx = (lb.photoIdx + dir + p.photos.length) % p.photos.length;
+  showLightboxImage();
+};
+document.getElementById('lightbox').addEventListener('click', e => {
+  if(e.target.id === 'lightbox') closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if(!document.getElementById('lightbox').classList.contains('show')) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') stepLightbox(-1);
+  if(e.key === 'ArrowRight') stepLightbox(1);
+});
+
+fetch('points.json')
+  .then(r => {
+    if(!r.ok) throw new Error('points.json introuvable (statut ' + r.status + ')');
+    return r.json();
+  })
+  .then(json => {
+    DATA = json;
+    initMap();
+    renderAll();
+  })
+  .catch(err => {
+    document.getElementById('map').innerHTML =
+      '<div style="padding:24px;font-family:ui-sans-serif,sans-serif;font-size:.85rem;color:var(--muted)">'
+      + 'Impossible de charger points.json (' + esc(err.message) + ').<br>'
+      + 'Ouvre ce dossier avec un petit serveur local (ex. <code>python3 -m http.server</code>) plutôt que de double-cliquer le fichier, ou teste directement une fois publié sur GitHub Pages.'
+      + '</div>';
+  });
+</script>
+</body>
+</html>

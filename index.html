@@ -4,6 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Japon 2026 · carte</title>
+<meta name="description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3d2a4d">
+<link rel="icon" href="assets/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Japon 2026">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Japon 2026 — notre voyage">
+<meta property="og:description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+<meta property="og:image" content="https://syam42400.github.io/Japan-2026/assets/og-image.png">
+<meta property="og:url" content="https://syam42400.github.io/Japan-2026/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Japon 2026 — notre voyage">
+<meta name="twitter:description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+<meta name="twitter:image" content="https://syam42400.github.io/Japan-2026/assets/og-image.png">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 <style>
 :root{
@@ -23,9 +43,13 @@ header.cover>*{position:relative;z-index:1}
 .jp{font-size:.7rem;letter-spacing:8px;opacity:.6;margin-bottom:10px}
 h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-spacing:-.4px}
 .dates{margin-top:8px;font-size:.92rem;opacity:.9;font-family:ui-sans-serif,sans-serif}
+.stats{margin-top:6px;font-size:.78rem;opacity:.75;font-family:ui-sans-serif,sans-serif}
 .langbar{display:flex;gap:8px;justify-content:center;margin-top:18px}
 .langbar button{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:.78rem;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 16px;cursor:pointer}
 .langbar button[aria-pressed="true"]{background:#fff;color:#3d2a4d;border-color:#fff}
+.sharebtn{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:.78rem;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 16px;cursor:pointer}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(12px);background:var(--ink);color:var(--paper);font-family:ui-sans-serif,sans-serif;font-size:.82rem;padding:10px 18px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:10000;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .wrap{max-width:960px;margin:0 auto;padding:18px 16px 60px}
 .welcome{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 16px;margin-bottom:16px;font-style:italic;font-size:.9rem;color:var(--ink2);display:none}
 #map{width:100%;height:64vh;min-height:360px;border-radius:13px;border:1px solid var(--line)}
@@ -34,6 +58,8 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .dayrow{background:var(--card);border:1px solid var(--line);border-radius:11px;margin-bottom:8px;padding:11px 14px;display:flex;align-items:center;gap:12px;cursor:pointer}
 .dayrow:hover{background:var(--line2)}
+.dayrow.today{border-color:var(--gold);border-width:2px;background:var(--line2)}
+.today-tag{color:var(--gold);font-weight:700}
 .dayrow .dn{flex:0 0 auto;width:34px;height:34px;border-radius:9px;color:#fff;display:flex;align-items:center;justify-content:center;font-family:ui-sans-serif,sans-serif;font-weight:800;font-size:.82rem}
 .dayrow .dt{flex:1;min-width:0}
 .dayrow .t{display:block;font-weight:600;font-size:.94rem}
@@ -68,7 +94,11 @@ footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-si
   <div class="jp">日 本 旅 行</div>
   <h1 id="c-title"></h1>
   <p class="dates" id="c-sub"></p>
+  <p class="stats" id="c-stats"></p>
   <div class="langbar" id="langbar"></div>
+  <div class="langbar" style="margin-top:8px">
+    <button type="button" class="sharebtn" id="share-btn">🔗 <span id="share-label"></span></button>
+  </div>
 </header>
 <div class="wrap">
   <p class="welcome" id="c-welcome"></p>
@@ -87,16 +117,62 @@ footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-si
   <div class="lb-cap" id="lb-cap"></div>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
 const UI = {
-  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique. Les tracés entre les étapes sont indicatifs, pas un relevé GPS réel.'},
-  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting. Lines between stops are indicative, not an actual GPS log.'},
-  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost. De lijnen tussen de etappes zijn indicatief, geen echte GPS-registratie.'}
+  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique. Les tracés entre les étapes sont indicatifs, pas un relevé GPS réel.',
+      share:'Partager', shareCopied:'Lien copié !', today:"· aujourd'hui",
+      stats:(d,km,ph)=>`${d} jours · ${km} km à vol d'oiseau · ${ph} photo${ph>1?'s':''}`},
+  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting. Lines between stops are indicative, not an actual GPS log.',
+      share:'Share', shareCopied:'Link copied!', today:'· today',
+      stats:(d,km,ph)=>`${d} days · ${km} km as the crow flies · ${ph} photo${ph>1?'s':''}`},
+  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost. De lijnen tussen de etappes zijn indicatief, geen echte GPS-registratie.',
+      share:'Delen', shareCopied:'Link gekopieerd!', today:'· vandaag',
+      stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`}
 };
+const TRIP_START = new Date(2026, 8, 11); // 11 septembre 2026
 let lang = 'fr';
 let DATA = null;
 let map, markers = [], polyline;
+let todayIdx = null;
+
+function dateForDay(n){
+  const d = new Date(TRIP_START);
+  d.setDate(d.getDate() + (n - 1));
+  d.setHours(0,0,0,0);
+  return d;
+}
+function findTodayIndex(){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const first = dateForDay(DATA.points[0].n);
+  const last = dateForDay(DATA.points[DATA.points.length-1].n);
+  if(today < first || today > last) return null;
+  let best = 0, bestDiff = Infinity;
+  DATA.points.forEach((p, idx) => {
+    const diff = Math.abs(dateForDay(p.n) - today);
+    if(diff < bestDiff){ bestDiff = diff; best = idx; }
+  });
+  return best;
+}
+function haversineKm(lat1,lon1,lat2,lon2){
+  const R = 6371;
+  const dLat = (lat2-lat1) * Math.PI/180;
+  const dLon = (lon2-lon1) * Math.PI/180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+function formatKm(km){
+  return Math.round(km).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 
@@ -124,6 +200,14 @@ function renderHeader(){
   document.querySelectorAll('#langbar button').forEach(b => b.onclick = () => { lang = b.dataset.l; renderAll(); });
   document.getElementById('foot').textContent = UI[lang].foot;
   document.getElementById('sec-days').textContent = UI[lang].days;
+  document.getElementById('share-label').textContent = UI[lang].share;
+
+  const totalKm = DATA.points.slice(1).reduce((sum, p, i) =>
+    sum + haversineKm(DATA.points[i].lat, DATA.points[i].lon, p.lat, p.lon), 0);
+  const totalPhotos = DATA.points.reduce((sum, p) => sum + (p.photos ? p.photos.length : 0), 0);
+  document.getElementById('c-stats').textContent =
+    UI[lang].stats(DATA.points.length, formatKm(totalKm), totalPhotos);
+
   const welcomeEl = document.getElementById('c-welcome');
   const welcomeText = DATA.trip.welcome && DATA.trip.welcome[lang];
   welcomeEl.textContent = welcomeText || '';
@@ -138,11 +222,11 @@ function renderLegend(){
 
 function renderDayList(){
   document.getElementById('daylist').innerHTML = DATA.points.map((p,idx) => `
-    <div class="dayrow" data-idx="${idx}">
+    <div class="dayrow${idx===todayIdx?' today':''}" data-idx="${idx}">
       <span class="dn" style="background:${p.color}">${p.n}</span>
       <span class="dt">
         <span class="t">${esc(p.title[lang])}${p.note && p.note[lang] ? `<span class="pcount">💬</span>` : ''}${p.photos && p.photos.length ? `<span class="pcount">📷 ${p.photos.length}</span>` : ''}</span>
-        <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}</span>
+        <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}${idx===todayIdx?` <span class="today-tag">${UI[lang].today}</span>`:''}</span>
       </span>
     </div>`).join('');
   document.querySelectorAll('.dayrow').forEach(row => row.onclick = () => {
@@ -180,6 +264,11 @@ function initMap(){
   });
 
   map.fitBounds(polyline.getBounds(), {padding:[30,30]});
+  if(todayIdx !== null){
+    const p = DATA.points[todayIdx];
+    map.setView([p.lat, p.lon], 9);
+    markers[todayIdx].openPopup();
+  }
 }
 
 function renderAll(){
@@ -220,6 +309,24 @@ document.addEventListener('keydown', e => {
   if(e.key === 'ArrowRight') stepLightbox(1);
 });
 
+document.getElementById('share-btn').addEventListener('click', async () => {
+  const shareData = {
+    title: DATA ? DATA.trip.title[lang] : document.title,
+    text: DATA ? DATA.trip.sub[lang] : '',
+    url: location.href
+  };
+  if(navigator.share){
+    try { await navigator.share(shareData); } catch(e){ /* cancelled, ignore */ }
+  } else {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      showToast(UI[lang].shareCopied);
+    } catch(e){
+      prompt('Copie ce lien :', location.href);
+    }
+  }
+});
+
 fetch('points.json')
   .then(r => {
     if(!r.ok) throw new Error('points.json introuvable (statut ' + r.status + ')');
@@ -227,6 +334,7 @@ fetch('points.json')
   })
   .then(json => {
     DATA = json;
+    todayIdx = findTodayIndex();
     initMap();
     renderAll();
   })

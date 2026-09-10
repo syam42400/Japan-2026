@@ -153,6 +153,7 @@ document.getElementById('change-settings').addEventListener('click', () => {
     document.getElementById('gh-owner').value = s.owner;
     document.getElementById('gh-repo').value = s.repo;
     document.getElementById('gh-branch').value = s.branch;
+    document.getElementById('gh-token').value = s.token;
   }
   clearSettingsUI();
 });
@@ -305,7 +306,7 @@ document.getElementById('send').addEventListener('click', async () => {
     document.getElementById('files').value = '';
     document.getElementById('filelist').innerHTML = '';
   } catch(err) {
-    setStatus(`Échec : ${err.message}`, 'err');
+    setStatus(`Échec sur ${s.owner}/${s.repo} (branche ${s.branch}) : ${err.message}`, 'err');
     if(uploaded.length){
       // fallback: show manual snippet with whatever succeeded
       const existing = (p.photos || []).slice();

@@ -7,11 +7,11 @@
 <style>
 :root{
   --paper:#faf7f2; --card:#fff; --ink:#26262e; --ink2:#54525c; --muted:#827d78;
-  --line:#e7e0d6; --line2:#f1ece4; --gold:#9a7420;
+  --line:#e7e0d6; --line2:#f1ece4; --gold:#9a7420; --ok:#2f7a4f; --err:#b3402f;
 }
 @media (prefers-color-scheme:dark){
   :root{--paper:#141416;--card:#1d1d20;--ink:#f0eeea;--ink2:#c3c0bb;--muted:#94908b;
-        --line:#333236;--line2:#28282c;--gold:#d8b45e}
+        --line:#333236;--line2:#28282c;--gold:#d8b45e;--ok:#5cbf88;--err:#e08066}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
@@ -21,23 +21,31 @@ header.cover h1{font-family:ui-serif,Georgia,serif;font-size:1.3rem;font-weight:
 .wrap{max-width:560px;margin:0 auto;padding:20px 16px 60px}
 .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 17px;margin-bottom:16px}
 .step h2{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:10px}
-select, input[type=file]{width:100%;font:inherit;padding:10px 11px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
-label.chk{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--ink2);margin-top:12px}
+select, input[type=file], input[type=text], input[type=password]{width:100%;font:inherit;padding:10px 11px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);margin-bottom:9px}
+label.fl{display:block;font-size:.78rem;color:var(--muted);margin-bottom:4px}
+label.chk{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--ink2);margin-top:2px}
 .filerow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line2)}
 .filerow:last-child{border:none}
 .filerow img{width:46px;height:46px;object-fit:cover;border-radius:6px;flex:0 0 auto;background:var(--line2)}
-.filerow .meta{flex:1;min-width:0}
 .filerow .name{font-size:.82rem;color:var(--ink2);word-break:break-all}
-.filerow .arrow{font-size:.7rem;color:var(--muted)}
-.filerow .newname{font-size:.82rem;color:var(--gold);font-weight:600;word-break:break-all}
-button.primary{width:100%;background:var(--gold);color:#fff;border:none;border-radius:9px;padding:13px;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer;margin-top:14px}
+button.primary{width:100%;background:var(--gold);color:#fff;border:none;border-radius:9px;padding:13px;font:inherit;font-weight:700;font-size:.92rem;cursor:pointer;margin-top:6px}
+button.primary:disabled{opacity:.5}
+button.secondary{width:100%;background:none;color:var(--gold);border:1px solid var(--gold);border-radius:9px;padding:11px;font:inherit;font-weight:600;font-size:.86rem;cursor:pointer;margin-top:8px}
 button.copy{background:var(--line2);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;margin-top:10px}
+button.link{background:none;border:none;color:var(--gold);font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:underline;padding:0}
 textarea{width:100%;min-height:64px;margin-top:10px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--line2);color:var(--ink);resize:vertical}
 .hint{font-size:.8rem;color:var(--muted);margin-top:6px}
-.upload-names{font-size:.85rem;color:var(--ink2);margin-top:8px}
-.upload-names code{background:var(--line2);padding:1px 5px;border-radius:4px;font-size:.8rem}
+.status{font-size:.85rem;margin-top:12px;padding:10px 12px;border-radius:8px;background:var(--line2);color:var(--ink2)}
+.status.ok{background:rgba(47,122,79,.12);color:var(--ok)}
+.status.err{background:rgba(179,64,47,.12);color:var(--err)}
+.connected{font-size:.85rem;color:var(--ink2);display:flex;justify-content:space-between;align-items:center}
+#settings-form{display:none}
+#settings-summary{display:none}
 #out{display:none}
 .badge{display:inline-block;background:var(--line2);color:var(--muted);font-size:.7rem;font-weight:700;border-radius:20px;padding:2px 9px;margin-left:6px}
+details summary{cursor:pointer;font-size:.82rem;color:var(--muted)}
+details p, details ol{font-size:.82rem;color:var(--ink2);margin-top:8px}
+details ol{padding-left:18px}
 </style>
 </head>
 <body>
@@ -48,6 +56,36 @@ textarea{width:100%;min-height:64px;margin-top:10px;font-family:ui-monospace,Men
 <div class="wrap">
 
   <div class="step">
+    <h2>Réglages GitHub</h2>
+    <div id="settings-summary" class="connected">
+      <span id="summary-text"></span>
+      <button class="link" id="change-settings">Changer</button>
+    </div>
+    <div id="settings-form">
+      <label class="fl">Nom d'utilisateur / organisation GitHub</label>
+      <input type="text" id="gh-owner" placeholder="ex. marie-dubois">
+      <label class="fl">Nom du dépôt</label>
+      <input type="text" id="gh-repo" placeholder="ex. japon-2026">
+      <label class="fl">Branche</label>
+      <input type="text" id="gh-branch" placeholder="main" value="main">
+      <label class="fl">Jeton d'accès personnel (fine-grained)</label>
+      <input type="password" id="gh-token" placeholder="github_pat_...">
+      <button class="primary" id="save-settings">Enregistrer sur cet appareil</button>
+      <details>
+        <summary>Comment créer ce jeton ?</summary>
+        <ol>
+          <li>Sur github.com : Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</li>
+          <li>Repository access : sélectionne uniquement ce dépôt</li>
+          <li>Permissions → Contents : Read and write</li>
+          <li>Donne-lui une date d'expiration (par ex. juste après ton retour)</li>
+          <li>Copie le jeton généré et colle-le ci-dessus</li>
+        </ol>
+        <p>Il reste uniquement sur ce téléphone (stockage local du navigateur) et sert seulement à parler directement à GitHub — aucun autre serveur n'est impliqué.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="step">
     <h2>1 · Choisis le jour</h2>
     <select id="day"></select>
   </div>
@@ -55,98 +93,246 @@ textarea{width:100%;min-height:64px;margin-top:10px;font-family:ui-monospace,Men
   <div class="step">
     <h2>2 · Choisis une ou plusieurs photos</h2>
     <input type="file" id="files" accept="image/*" multiple>
-    <label class="chk"><input type="checkbox" id="clean" checked> Simplifier les noms de fichiers (recommandé)</label>
+    <p class="hint">Les photos sont redimensionnées et compressées automatiquement avant l'envoi.</p>
     <div id="filelist"></div>
   </div>
 
-  <button class="primary" id="gen">Générer le code à coller</button>
+  <button class="primary" id="send" disabled>Envoyer vers la carte</button>
+  <div class="status" id="status" style="display:none"></div>
+
+  <button class="secondary" id="toggle-manual">Ou générer le code à copier moi-même</button>
 
   <div class="step" id="out">
-    <h2>3 · Colle ceci dans points.json <span class="badge" id="daybadge"></span></h2>
-    <p class="hint">Dans points.json, trouve le jour choisi et remplace sa ligne <code>"photos": [...]</code> par :</p>
+    <h2>Code à coller dans points.json <span class="badge" id="daybadge"></span></h2>
+    <p class="hint">Trouve le jour choisi et remplace sa ligne <code>"photos": [...]</code> par :</p>
     <textarea id="snippet" readonly></textarea>
     <button class="copy" id="copybtn">Copier</button>
-
-    <p class="hint" style="margin-top:16px">Puis, sur GitHub, uploade les mêmes photos dans <code>photos/</code> :</p>
-    <div class="upload-names" id="uploadnames"></div>
   </div>
 
 </div>
 
 <script>
 let DATA = null;
-let picked = []; // {file, origName, newName}
+let picked = []; // {file, origName, url}
 
-function slugify(name){
-  const dot = name.lastIndexOf('.');
-  const base = dot > -1 ? name.slice(0, dot) : name;
-  const ext = dot > -1 ? name.slice(dot).toLowerCase() : '';
-  const clean = base.normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-    .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-  return (clean || 'photo') + (ext === '.jpeg' ? '.jpg' : ext);
+// ---------- settings ----------
+function loadSettings(){
+  try { return JSON.parse(localStorage.getItem('j26_gh_settings') || 'null'); }
+  catch(e){ return null; }
 }
-
-function dayLabel(p){
-  return `Jour ${p.n} · ${p.date.fr} · ${p.title.fr}`;
+function saveSettings(s){ localStorage.setItem('j26_gh_settings', JSON.stringify(s)); }
+function clearSettingsUI(){
+  document.getElementById('settings-form').style.display = 'block';
+  document.getElementById('settings-summary').style.display = 'none';
 }
+function showSettingsSummary(s){
+  document.getElementById('summary-text').textContent = `Connecté à ${s.owner}/${s.repo} (${s.branch})`;
+  document.getElementById('settings-summary').style.display = 'flex';
+  document.getElementById('settings-form').style.display = 'none';
+}
+function refreshSettingsUI(){
+  const s = loadSettings();
+  if(s && s.owner && s.repo && s.token) showSettingsSummary(s);
+  else clearSettingsUI();
+  document.getElementById('send').disabled = !(s && s.owner && s.repo && s.token) || !picked.length;
+}
+document.getElementById('save-settings').addEventListener('click', () => {
+  const s = {
+    owner: document.getElementById('gh-owner').value.trim(),
+    repo: document.getElementById('gh-repo').value.trim(),
+    branch: document.getElementById('gh-branch').value.trim() || 'main',
+    token: document.getElementById('gh-token').value.trim()
+  };
+  if(!s.owner || !s.repo || !s.token){ alert('Renseigne au moins le nom d\'utilisateur, le dépôt et le jeton.'); return; }
+  saveSettings(s);
+  refreshSettingsUI();
+});
+document.getElementById('change-settings').addEventListener('click', () => {
+  const s = loadSettings();
+  if(s){
+    document.getElementById('gh-owner').value = s.owner;
+    document.getElementById('gh-repo').value = s.repo;
+    document.getElementById('gh-branch').value = s.branch;
+  }
+  clearSettingsUI();
+});
 
+// ---------- days ----------
+function dayLabel(p){ return `Jour ${p.n} · ${p.date.fr} · ${p.title.fr}`; }
 function populateDays(){
   const sel = document.getElementById('day');
-  sel.innerHTML = DATA.points.map((p, idx) =>
-    `<option value="${idx}">${dayLabel(p)}</option>`).join('');
+  sel.innerHTML = DATA.points.map((p, idx) => `<option value="${idx}">${dayLabel(p)}</option>`).join('');
 }
 
-function renderFileList(){
-  const box = document.getElementById('filelist');
-  const clean = document.getElementById('clean').checked;
-  box.innerHTML = picked.map((f, i) => `
-    <div class="filerow">
-      <img src="${f.url}" alt="">
-      <div class="meta">
-        <div class="name">${f.origName}</div>
-        ${clean ? `<div class="newname">→ ${f.newName}</div>` : ''}
-      </div>
-    </div>`).join('');
-}
-
+// ---------- file picking ----------
 document.getElementById('files').addEventListener('change', e => {
   picked = Array.from(e.target.files).map(file => ({
-    file,
-    origName: file.name,
-    newName: slugify(file.name),
-    url: URL.createObjectURL(file)
+    file, origName: file.name, url: URL.createObjectURL(file)
   }));
-  renderFileList();
+  document.getElementById('filelist').innerHTML = picked.map(f =>
+    `<div class="filerow"><img src="${f.url}" alt=""><div class="name">${f.origName}</div></div>`).join('');
+  refreshSettingsUI();
 });
-document.getElementById('clean').addEventListener('change', renderFileList);
 
-document.getElementById('gen').addEventListener('click', () => {
+// ---------- image compression ----------
+function resizeImage(file, maxDim, quality){
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      let {width, height} = img;
+      if(width > maxDim || height > maxDim){
+        if(width > height){ height = Math.round(height * maxDim/width); width = maxDim; }
+        else { width = Math.round(width * maxDim/height); height = maxDim; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = width; canvas.height = height;
+      canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+      canvas.toBlob(blob => {
+        URL.revokeObjectURL(url);
+        blob ? resolve(blob) : reject(new Error('Compression impossible'));
+      }, 'image/jpeg', quality);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Image illisible')); };
+    img.src = url;
+  });
+}
+async function compressUnderLimit(file, limitBytes){
+  let dim = 1600, q = 0.82;
+  for(let i=0;i<4;i++){
+    const blob = await resizeImage(file, dim, q);
+    if(blob.size <= limitBytes || i === 3) return blob;
+    dim = Math.round(dim*0.8); q = Math.max(0.5, q-0.15);
+  }
+}
+function blobToBase64(blob){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+function slugBase(name){
+  const dot = name.lastIndexOf('.');
+  const base = dot > -1 ? name.slice(0, dot) : name;
+  return (base.normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')) || 'photo';
+}
+function uniqueName(dayNum, origName, i){
+  const suffix = Date.now().toString(36).slice(-4) + i;
+  return `${dayNum}-${slugBase(origName)}-${suffix}.jpg`;
+}
+
+// ---------- GitHub API ----------
+function b64DecodeUnicode(str){
+  const binary = atob(str.replace(/\n/g,''));
+  const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+  return new TextDecoder('utf-8').decode(bytes);
+}
+function b64EncodeUnicode(str){
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+function apiHeaders(token){
+  return {
+    'Authorization': `token ${token}`,
+    'Accept': 'application/vnd.github+json',
+    'Content-Type': 'application/json'
+  };
+}
+async function ghPutFile(s, path, base64Content, message, sha){
+  const segs = path.split('/').map(encodeURIComponent).join('/');
+  const url = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${segs}`;
+  const body = { message, content: base64Content, branch: s.branch };
+  if(sha) body.sha = sha;
+  const res = await fetch(url, { method:'PUT', headers: apiHeaders(s.token), body: JSON.stringify(body) });
+  if(!res.ok){ const j = await res.json().catch(()=>({})); throw new Error(j.message || `Échec (${res.status})`); }
+  return res.json();
+}
+async function ghGetFile(s, path){
+  const segs = path.split('/').map(encodeURIComponent).join('/');
+  const url = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${segs}?ref=${encodeURIComponent(s.branch)}`;
+  const res = await fetch(url, { headers: apiHeaders(s.token) });
+  if(!res.ok){ const j = await res.json().catch(()=>({})); throw new Error(j.message || `Échec de lecture (${res.status})`); }
+  return res.json();
+}
+
+function setStatus(msg, kind){
+  const el = document.getElementById('status');
+  el.style.display = 'block';
+  el.textContent = msg;
+  el.className = 'status' + (kind ? ' ' + kind : '');
+}
+
+document.getElementById('send').addEventListener('click', async () => {
+  const s = loadSettings();
+  if(!s || !s.owner || !s.repo || !s.token){ alert('Renseigne d\'abord tes réglages GitHub.'); return; }
+  if(!picked.length){ alert('Choisis au moins une photo.'); return; }
+
+  const idx = +document.getElementById('day').value;
+  const p = DATA.points[idx];
+  const dayNum = String(p.n).padStart(2,'0');
+  const sendBtn = document.getElementById('send');
+  sendBtn.disabled = true;
+  const uploaded = [];
+
+  try {
+    for(let i=0;i<picked.length;i++){
+      setStatus(`Compression de la photo ${i+1}/${picked.length}…`);
+      const blob = await compressUnderLimit(picked[i].file, 900*1024);
+      const b64 = await blobToBase64(blob);
+      const name = uniqueName(dayNum, picked[i].origName, i);
+      const path = `photos/${name}`;
+      setStatus(`Envoi de la photo ${i+1}/${picked.length}…`);
+      await ghPutFile(s, path, b64, `Ajoute une photo — jour ${p.n}`);
+      uploaded.push(path);
+    }
+
+    setStatus('Mise à jour de la carte (points.json)…');
+    const current = await ghGetFile(s, 'points.json');
+    const json = JSON.parse(b64DecodeUnicode(current.content));
+    const point = json.points.find(x => x.n === p.n);
+    if(!point) throw new Error('Jour introuvable dans points.json');
+    point.photos = (point.photos || []).concat(uploaded);
+    const newContent = b64EncodeUnicode(JSON.stringify(json, null, 1));
+    await ghPutFile(s, 'points.json', newContent, `Ajoute ${uploaded.length} photo(s) — jour ${p.n}`, current.sha);
+
+    setStatus(`✅ ${uploaded.length} photo(s) ajoutée(s) au jour ${p.n}. La carte est à jour.`, 'ok');
+    picked = [];
+    document.getElementById('files').value = '';
+    document.getElementById('filelist').innerHTML = '';
+  } catch(err) {
+    setStatus(`Échec : ${err.message}`, 'err');
+    if(uploaded.length){
+      // fallback: show manual snippet with whatever succeeded
+      const existing = (p.photos || []).slice();
+      const all = existing.concat(uploaded);
+      document.getElementById('daybadge').textContent = dayLabel(p);
+      document.getElementById('snippet').value = `"photos": [${all.map(x=>`"${x}"`).join(', ')}]`;
+      document.getElementById('out').style.display = 'block';
+      setStatus(`Les photos ont bien été envoyées, mais la mise à jour de points.json a échoué (${err.message}). Colle ce code à la main.`, 'err');
+    }
+  } finally {
+    sendBtn.disabled = !picked.length;
+  }
+});
+
+// ---------- manual fallback (no token needed) ----------
+document.getElementById('toggle-manual').addEventListener('click', () => {
   if(!picked.length){ alert('Choisis au moins une photo.'); return; }
   const idx = +document.getElementById('day').value;
   const p = DATA.points[idx];
-  const clean = document.getElementById('clean').checked;
-  const dayNum = String(p.n).padStart(2,'0');
-
-  const usedNames = picked.map((f,i) => {
-    if(!clean) return f.origName;
-    let n = f.newName;
-    if(!n.startsWith(dayNum + '-')) n = `${dayNum}-${n}`;
-    return n;
-  });
-
   const existing = (p.photos || []).slice();
-  const all = existing.concat(usedNames.map(n => `photos/${n}`));
-  const snippet = `"photos": [${all.map(x => `"${x}"`).join(', ')}]`;
-
+  const names = picked.map(f => `photos/${f.origName}`);
+  const all = existing.concat(names);
   document.getElementById('daybadge').textContent = dayLabel(p);
-  document.getElementById('snippet').value = snippet;
-  document.getElementById('uploadnames').innerHTML = picked.map((f,i) =>
-    `<div>${clean ? `<code>${f.origName}</code> → renomme en <code>${usedNames[i]}</code>` : `<code>${f.origName}</code> (garde ce nom)`}</div>`
-  ).join('');
+  document.getElementById('snippet').value = `"photos": [${all.map(x=>`"${x}"`).join(', ')}]`;
   document.getElementById('out').style.display = 'block';
   document.getElementById('out').scrollIntoView({behavior:'smooth'});
 });
-
 document.getElementById('copybtn').addEventListener('click', () => {
   const ta = document.getElementById('snippet');
   navigator.clipboard.writeText(ta.value).then(() => {
@@ -158,7 +344,7 @@ document.getElementById('copybtn').addEventListener('click', () => {
 
 fetch('points.json')
   .then(r => r.json())
-  .then(json => { DATA = json; populateDays(); })
+  .then(json => { DATA = json; populateDays(); refreshSettingsUI(); })
   .catch(() => {
     document.querySelector('.wrap').innerHTML =
       '<div class="step">Impossible de charger points.json. Ouvre cette page depuis le site publié (GitHub Pages), pas en fichier local.</div>';

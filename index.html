@@ -44,6 +44,7 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .popupbox li{font-size:.8rem;color:#444;padding:3px 0 3px 13px;position:relative;border-bottom:1px solid #eee}
 .popupbox li:last-child{border:none}
 .popupbox li::before{content:"—";position:absolute;left:0;color:#999}
+.popupbox .pnote{margin-top:9px;padding:7px 10px;background:#f4f1ea;border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-style:italic;font-size:.8rem;color:#3a3a3a}
 .sectitle{font-family:ui-sans-serif,sans-serif;font-size:.85rem;font-weight:700;color:var(--muted);margin:26px 0 10px;text-transform:uppercase;letter-spacing:.5px}
 footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;line-height:1.6;text-align:center}
 .leaflet-popup-content-wrapper{border-radius:10px}
@@ -99,6 +100,7 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 
 function popupHtml(p, idx){
   const items = p.items.map(i => `<li>${esc(i[lang])}</li>`).join('');
+  const note = (p.note && p.note[lang]) ? `<div class="pnote">${esc(p.note[lang])}</div>` : '';
   const pics = (p.photos && p.photos.length)
     ? `<div class="ppics">${p.photos.map((src,i) => `<img src="${esc(src)}" loading="lazy" onclick="openLightbox(${idx},${i})" alt="">`).join('')}</div>`
     : '';
@@ -106,6 +108,7 @@ function popupHtml(p, idx){
     <div class="pd">${esc(p.date[lang])} · ${esc(p.place[lang])}</div>
     <h3>${esc(p.title[lang])}</h3>
     <ul>${items}</ul>
+    ${note}
     ${pics}
   </div>`;
 }
@@ -132,7 +135,7 @@ function renderDayList(){
     <div class="dayrow" data-idx="${idx}">
       <span class="dn" style="background:${p.color}">${p.n}</span>
       <span class="dt">
-        <span class="t">${esc(p.title[lang])}${p.photos && p.photos.length ? `<span class="pcount">📷 ${p.photos.length}</span>` : ''}</span>
+        <span class="t">${esc(p.title[lang])}${p.note && p.note[lang] ? `<span class="pcount">💬</span>` : ''}${p.photos && p.photos.length ? `<span class="pcount">📷 ${p.photos.length}</span>` : ''}</span>
         <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}</span>
       </span>
     </div>`).join('');

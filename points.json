@@ -93,25 +93,25 @@
    "city": "vol",
    "color": "#6b6a75",
    "place": {
-    "fr": "Lyon",
-    "en": "Lyon",
-    "nl": "Lyon",
-    "km": "លីយ៉ុង"
+    "fr": "France",
+    "en": "France",
+    "nl": "Frankrijk",
+    "km": "បារាំង"
    },
-   "lat": 45.764,
-   "lon": 4.8357,
+   "lat": 46.7,
+   "lon": 2.2,
    "title": {
-    "fr": "Départ de Lyon",
-    "en": "Leaving Lyon",
-    "nl": "Vertrek uit Lyon",
-    "km": "ការចាកចេញពីលីយ៉ុង"
+    "fr": "Départ de France",
+    "en": "Leaving France",
+    "nl": "Vertrek uit Frankrijk",
+    "km": "ការចាកចេញពីបារាំង"
    },
    "items": [
     {
-     "fr": "Journée libre à Lyon, derniers préparatifs",
-     "en": "A free day in Lyon, final preparations",
-     "nl": "Vrije dag in Lyon, laatste voorbereidingen",
-     "km": "ថ្ងៃទំនេរនៅលីយ៉ុង ត្រៀមរៀបចំចុងក្រោយ"
+     "fr": "Journée libre, derniers préparatifs",
+     "en": "A free day, final preparations",
+     "nl": "Vrije dag, laatste voorbereidingen",
+     "km": "ថ្ងៃទំនេរ ត្រៀមរៀបចំចុងក្រោយ"
     },
     {
      "fr": "Départ pour l'aéroport en fin d'après-midi",
@@ -131,10 +131,10 @@
     "photos/01-1000044858-n9cn0.jpg"
    ],
    "note": {
-    "fr": "Après notre course matinale à Lyon, derniers préparatifs avant le grand départ. Alerte aux fortes intempéries 😅 mais hâte de partir.",
-    "en": "After our morning run in Lyon, final preparations before the big departure. A severe weather warning is in effect 😅 but we can't wait to leave.",
-    "nl": "Na onze ochtendloop in Lyon, laatste voorbereidingen voor het grote vertrek. Waarschuwing voor zwaar weer 😅 maar we kunnen niet wachten om te vertrekken.",
-    "km": "បន្ទាប់ពីការរត់ប្រណាំងពេលព្រឹកនៅលីយ៉ុង យើងបានត្រៀមរៀបចំចុងក្រោយមុននឹងចេញដំណើរ។ មានការព្រមានពីអាកាសធាតុអាក្រក់ខ្លាំង 😅 ប៉ុន្តែរង់ចាំមិនបានទេក្នុងការចេញដំណើរ។"
+    "fr": "Après notre course matinale, derniers préparatifs avant le grand départ. Alerte aux fortes intempéries 😅 mais hâte de partir.",
+    "en": "After our morning run, final preparations before the big departure. A severe weather warning is in effect 😅 but we can't wait to leave.",
+    "nl": "Na onze ochtendloop, laatste voorbereidingen voor het grote vertrek. Waarschuwing voor zwaar weer 😅 maar we kunnen niet wachten om te vertrekken.",
+    "km": "បន្ទាប់ពីការរត់ប្រណាំងពេលព្រឹករបស់យើង យើងបានត្រៀមរៀបចំចុងក្រោយមុននឹងចេញដំណើរ។ មានការព្រមានពីអាកាសធាតុអាក្រក់ខ្លាំង 😅 ប៉ុន្តែរង់ចាំមិនបានទេក្នុងការចេញដំណើរ។"
    }
   },
   {
@@ -1063,10 +1063,10 @@
      "km": "រថភ្លើងលឿនទៅព្រលានយន្តហោះណារីតានៅចុងបញ្ចប់រសៀល"
     },
     {
-     "fr": "Décollage à 21h15, escale à Istanbul, atterrissage à Lyon le 30 au matin",
-     "en": "Take-off at 21:15, a stopover in Istanbul, landing in Lyon on the morning of the 30th",
-     "nl": "Vertrek om 21.15 uur, overstap in Istanbul, landing in Lyon op de ochtend van de 30e",
-     "km": "ហោះហើរនៅម៉ោង២១:១៥ ចតឈប់នៅអ៊ីស្តង់ប៊ុល ចុះចតនៅលីយ៉ុងនៅព្រឹកថ្ងៃទី៣០"
+     "fr": "Décollage à 21h15, escale à Istanbul, atterrissage le 30 au matin",
+     "en": "Take-off at 21:15, a stopover in Istanbul, landing on the morning of the 30th",
+     "nl": "Vertrek om 21.15 uur, overstap in Istanbul, landing op de ochtend van de 30e",
+     "km": "ហោះហើរនៅម៉ោង២១:១៥ ចតឈប់នៅអ៊ីស្តង់ប៊ុល ចុះចតនៅព្រឹកថ្ងៃទី៣០"
     }
    ],
    "tr": null,

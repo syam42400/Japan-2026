@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>Japon 2026 · carte</title>
-<meta name="description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+<meta name="description" content="Suis notre voyage au Japon, jour par jour.">
 
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3d2a4d">
@@ -16,15 +17,15 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Japon 2026 — notre voyage">
-<meta property="og:description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+<meta property="og:description" content="Suis notre voyage au Japon, jour par jour.">
 <meta property="og:image" content="https://syam42400.github.io/Japan-2026/assets/og-image.png">
 <meta property="og:url" content="https://syam42400.github.io/Japan-2026/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Japon 2026 — notre voyage">
-<meta name="twitter:description" content="Suis notre voyage au Japon, jour par jour, du 11 au 30 septembre 2026.">
+<meta name="twitter:description" content="Suis notre voyage au Japon, jour par jour.">
 <meta name="twitter:image" content="https://syam42400.github.io/Japan-2026/assets/og-image.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,7 +135,7 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
 
 <div class="toast" id="toast"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="assets/leaflet/leaflet.js"></script>
 <script>
 const UI = {
   fr:{loading:'Chargement de la carte…', days:'Jour par jour', photos:'Toutes les photos', noPhotos:'Les photos arriveront au fur et à mesure du voyage.', foot:'Carte personnelle sans compte ni inscription — hébergée en statique.',
@@ -192,7 +193,7 @@ function showToast(msg){
   showToast._t = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
 function popupHtml(p, idx){
   const items = p.items.map(i => `<li>${esc(i[lang])}</li>`).join('');

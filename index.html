@@ -25,6 +25,9 @@
 <meta name="twitter:image" content="https://syam42400.github.io/Japan-2026/assets/og-image.png">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#faf7f2; --card:#fff; --ink:#26262e; --ink2:#54525c; --muted:#827d78;
@@ -87,6 +90,11 @@ footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-si
 #lightbox .lb-prev{left:14px}
 #lightbox .lb-next{right:14px}
 #lightbox .lb-close{background:rgba(255,255,255,.12);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:1rem;cursor:pointer}
+html[lang="km"] body{font-family:'Noto Sans Khmer',ui-sans-serif,sans-serif}
+html[lang="km"] .sans,html[lang="km"] .dates,html[lang="km"] .stats,html[lang="km"] .langbar button,
+html[lang="km"] .sharebtn,html[lang="km"] .toast,html[lang="km"] .legend,html[lang="km"] .dayrow .dn,
+html[lang="km"] .dayrow .d,html[lang="km"] .popupbox,html[lang="km"] .popupbox h3,html[lang="km"] .sectitle,
+html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans Khmer',ui-sans-serif,sans-serif}
 </style>
 </head>
 <body>
@@ -130,7 +138,10 @@ const UI = {
       stats:(d,km,ph)=>`${d} days · ${km} km as the crow flies · ${ph} photo${ph>1?'s':''}`},
   nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost.',
       share:'Delen', shareCopied:'Link gekopieerd!', today:'· vandaag',
-      stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`}
+      stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`},
+  km:{loading:'កំពុងផ្ទុកផែនទី…', days:'ថ្ងៃម្តងៗ', foot:'ផែនទីផ្ទាល់ខ្លួន គ្មានតម្រូវឱ្យបង្កើតគណនី ឬចុះឈ្មោះ — បង្ហោះជាគេហទំព័រឋិតិវន្ត។',
+      share:'ចែករំលែក', shareCopied:'បានចម្លងតំណភ្ជាប់!', today:'· ថ្ងៃនេះ',
+      stats:(d,km,ph)=>`${d} ថ្ងៃ · ${km} គីឡូម៉ែត្រ តាមបន្ទាត់ត្រង់ · ${ph} រូបថត`}
 };
 const TRIP_START = new Date(2026, 8, 11); // 11 septembre 2026
 let lang = 'fr';
@@ -195,7 +206,7 @@ function renderHeader(){
   document.documentElement.lang = lang;
   document.getElementById('c-title').textContent = DATA.trip.title[lang];
   document.getElementById('c-sub').textContent = DATA.trip.sub[lang];
-  document.getElementById('langbar').innerHTML = ['fr','en','nl']
+  document.getElementById('langbar').innerHTML = ['fr','en','nl','km']
     .map(l => `<button type="button" data-l="${l}" aria-pressed="${l===lang}">${l.toUpperCase()}</button>`).join('');
   document.querySelectorAll('#langbar button').forEach(b => b.onclick = () => { lang = b.dataset.l; renderAll(); });
   document.getElementById('foot').textContent = UI[lang].foot;

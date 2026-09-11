@@ -17,6 +17,12 @@
    "en": "Welcome to the page where you can follow us. I'll try to update it whenever I feel like it, technical hiccups permitting. Can't wait to be back in my favourite country!",
    "nl": "Welkom op de pagina om ons te volgen. Ik probeer bij te werken wanneer ik er zin in heb, technische haperingen daargelaten. Ik kan niet wachten om terug te zijn in mijn favoriete land!",
    "km": "សូមស្វាគមន៍មកកាន់ទំព័រនេះដើម្បីតាមដានពួកយើង។ ខ្ញុំនឹងព្យាយាមធ្វើបច្ចុប្បន្នភាពនៅពេលដែលខ្ញុំមានអារម្មណ៍ចង់ធ្វើ ដរាបណាគ្មានបញ្ហាបច្ចេកទេស។ ចាំមិនបានទេក្នុងការវិលត្រឡប់ទៅកាន់ប្រទេសដែលខ្ញុំចូលចិត្តជាងគេ!"
+  },
+  "howto": {
+   "fr": "Comment utiliser le site : clique sur un point de la carte ou une ligne de la liste « Jour par jour » pour ouvrir les détails du jour (notes et photos). Les boutons FR / EN / NL / KM changent la langue, et « Partager » copie le lien de la page.",
+   "en": "How to use this site: tap a marker on the map or a row in the \"Day by day\" list to open that day's details (notes and photos). The FR / EN / NL / KM buttons switch language, and \"Share\" copies the page link.",
+   "nl": "Zo gebruik je deze site: tik op een punt op de kaart of een regel in de lijst \"Dag per dag\" om de details van die dag te openen (notities en foto's). De knoppen FR / EN / NL / KM wisselen van taal, en \"Delen\" kopieert de link naar de pagina.",
+   "km": "របៀបប្រើគេហទំព័រនេះ៖ ចុចលើចំណុចនៅលើផែនទី ឬជួរឈរនៅក្នុងបញ្ជី « ថ្ងៃម្តងៗ » ដើម្បីបើកព័ត៌មានលម្អិតនៃថ្ងៃនោះ (កំណត់ចំណាំ និងរូបថត)។ ប៊ូតុង FR / EN / NL / KM ប្តូរភាសា ហើយ « ចែករំលែក » ចម្លងតំណភ្ជាប់ទំព័រ។"
   }
  },
  "legend": {

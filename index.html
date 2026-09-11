@@ -122,13 +122,13 @@ footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-si
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
 const UI = {
-  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique. Les tracés entre les étapes sont indicatifs, pas un relevé GPS réel.',
+  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique.',
       share:'Partager', shareCopied:'Lien copié !', today:"· aujourd'hui",
       stats:(d,km,ph)=>`${d} jours · ${km} km à vol d'oiseau · ${ph} photo${ph>1?'s':''}`},
-  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting. Lines between stops are indicative, not an actual GPS log.',
+  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting.',
       share:'Share', shareCopied:'Link copied!', today:'· today',
       stats:(d,km,ph)=>`${d} days · ${km} km as the crow flies · ${ph} photo${ph>1?'s':''}`},
-  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost. De lijnen tussen de etappes zijn indicatief, geen echte GPS-registratie.',
+  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost.',
       share:'Delen', shareCopied:'Link gekopieerd!', today:'· vandaag',
       stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`}
 };

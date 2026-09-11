@@ -57,6 +57,15 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .wrap{max-width:960px;margin:0 auto;padding:18px 16px 60px}
 .welcome{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 16px;margin-bottom:16px;font-style:italic;font-size:.9rem;color:var(--ink2);display:none}
 .howto{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--line2);border-radius:10px;padding:11px 14px;margin-bottom:16px;font-size:.8rem;line-height:1.5;color:var(--ink2);display:none}
+.now{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 16px;margin-bottom:16px;display:none}
+.now .now-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.now .now-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--gold)}
+.now .now-title{font-size:.95rem;font-weight:600;margin-top:2px;color:var(--ink)}
+.now-see{font-size:.76rem;font-weight:600;color:var(--gold);background:none;border:1px solid var(--gold);border-radius:20px;padding:4px 12px;cursor:pointer;white-space:nowrap;font-family:inherit}
+.wxstrip{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.wxchip{display:flex;align-items:center;gap:5px;font-size:.76rem;color:var(--ink2);background:var(--line2);border-radius:20px;padding:4px 10px}
+.wxchip b{color:var(--ink);font-weight:700}
+.jst{margin-top:4px;font-size:.74rem;opacity:.72;font-family:ui-sans-serif,sans-serif}
 #map{width:100%;height:64vh;min-height:360px;border-radius:13px;border:1px solid var(--line)}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin:14px 0 22px;font-family:ui-sans-serif,sans-serif;font-size:.78rem;color:var(--ink2)}
 .legend span{display:flex;align-items:center;gap:6px}
@@ -99,7 +108,9 @@ html[lang="km"] body{font-family:'Noto Sans Khmer',ui-sans-serif,sans-serif}
 html[lang="km"] .sans,html[lang="km"] .dates,html[lang="km"] .stats,html[lang="km"] .langbar button,
 html[lang="km"] .sharebtn,html[lang="km"] .toast,html[lang="km"] .legend,html[lang="km"] .dayrow .dn,
 html[lang="km"] .dayrow .d,html[lang="km"] .popupbox,html[lang="km"] .popupbox h3,html[lang="km"] .sectitle,
-html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans Khmer',ui-sans-serif,sans-serif}
+html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap,html[lang="km"] .now,html[lang="km"] .now-label,
+html[lang="km"] .now-title,html[lang="km"] .now-see,html[lang="km"] .wxchip,
+html[lang="km"] .jst{font-family:'Noto Sans Khmer',ui-sans-serif,sans-serif}
 </style>
 </head>
 <body>
@@ -108,6 +119,7 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
   <h1 id="c-title"></h1>
   <p class="dates" id="c-sub"></p>
   <p class="stats" id="c-stats"></p>
+  <p class="jst" id="c-jst"></p>
   <div class="langbar" id="langbar"></div>
   <div class="langbar" style="margin-top:8px">
     <button type="button" class="sharebtn" id="share-btn">🔗 <span id="share-label"></span></button>
@@ -116,6 +128,7 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
 <div class="wrap">
   <p class="welcome" id="c-welcome"></p>
   <p class="howto" id="c-howto"></p>
+  <div class="now" id="c-now"></div>
   <div id="map"></div>
   <div class="legend" id="legend"></div>
   <div class="sectitle" id="sec-days"></div>
@@ -140,15 +153,19 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
 const UI = {
   fr:{loading:'Chargement de la carte…', days:'Jour par jour', photos:'Toutes les photos', noPhotos:'Les photos arriveront au fur et à mesure du voyage.', foot:'Carte personnelle sans compte ni inscription — hébergée en statique.',
       share:'Partager', shareCopied:'Lien copié !', today:"· aujourd'hui",
+      now:'En ce moment', seeOnMap:'Voir sur la carte', jst:'Heure au Japon',
       stats:(d,km,ph)=>`${d} jours · ${km} km à vol d'oiseau · ${ph} photo${ph>1?'s':''}`},
   en:{loading:'Loading the map…', days:'Day by day', photos:'All photos', noPhotos:'Photos will be added as the trip goes on.', foot:'A personal map with no account and no sign-up — static hosting.',
       share:'Share', shareCopied:'Link copied!', today:'· today',
+      now:'Right now', seeOnMap:'See on map', jst:'Time in Japan',
       stats:(d,km,ph)=>`${d} days · ${km} km as the crow flies · ${ph} photo${ph>1?'s':''}`},
   nl:{loading:'Kaart laden…', days:'Dag per dag', photos:"Alle foto's", noPhotos:"De foto's worden geleidelijk toegevoegd tijdens de reis.", foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost.',
       share:'Delen', shareCopied:'Link gekopieerd!', today:'· vandaag',
+      now:'Op dit moment', seeOnMap:'Bekijk op kaart', jst:'Tijd in Japan',
       stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`},
   km:{loading:'កំពុងផ្ទុកផែនទី…', days:'ថ្ងៃម្តងៗ', photos:'រូបថតទាំងអស់', noPhotos:'រូបថតនឹងត្រូវបានបន្ថែមបន្តិចម្តងៗពេលធ្វើដំណើរ។', foot:'ផែនទីផ្ទាល់ខ្លួន គ្មានតម្រូវឱ្យបង្កើតគណនី ឬចុះឈ្មោះ — បង្ហោះជាគេហទំព័រឋិតិវន្ត។',
       share:'ចែករំលែក', shareCopied:'បានចម្លងតំណភ្ជាប់!', today:'· ថ្ងៃនេះ',
+      now:'ឥឡូវនេះ', seeOnMap:'មើលលើផែនទី', jst:'ម៉ោងនៅជប៉ុន',
       stats:(d,km,ph)=>`${d} ថ្ងៃ · ${km} គីឡូម៉ែត្រ តាមបន្ទាត់ត្រង់ · ${ph} រូបថត`}
 };
 const TRIP_START = new Date(2026, 8, 11); // 11 septembre 2026
@@ -184,6 +201,53 @@ function haversineKm(lat1,lon1,lat2,lon2){
 }
 function formatKm(km){
   return Math.round(km).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+function isoDate(d){
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function weatherEmoji(code){
+  if(code === 0) return '☀️';
+  if(code === 1 || code === 2) return '🌤️';
+  if(code === 3) return '☁️';
+  if(code === 45 || code === 48) return '🌫️';
+  if(code >= 51 && code <= 67) return '🌧️';
+  if(code >= 71 && code <= 77) return '🌨️';
+  if(code >= 80 && code <= 82) return '🌦️';
+  if(code >= 85 && code <= 86) return '🌨️';
+  if(code >= 95) return '⛈️';
+  return '🌡️';
+}
+const weatherCache = {};
+async function fetchDailyForecast(lat, lon){
+  const key = lat + ',' + lon;
+  if(weatherCache[key]) return weatherCache[key];
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=16`;
+  const res = await fetch(url);
+  if(!res.ok) throw new Error('weather http ' + res.status);
+  const json = await res.json();
+  weatherCache[key] = json;
+  return json;
+}
+let nowWeather = [];
+async function loadNowWeather(){
+  if(todayIdx === null) return;
+  const idxs = [todayIdx, todayIdx+1, todayIdx+2].filter(i => i < DATA.points.length);
+  nowWeather = await Promise.all(idxs.map(async i => {
+    const p = DATA.points[i];
+    try {
+      const forecast = await fetchDailyForecast(p.lat, p.lon);
+      const di = forecast.daily.time.indexOf(isoDate(dateForDay(p.n)));
+      if(di < 0) return {p, ok:false};
+      return {p, ok:true, code: forecast.daily.weather_code[di], tmax: forecast.daily.temperature_2m_max[di], tmin: forecast.daily.temperature_2m_min[di]};
+    } catch(e){ return {p, ok:false}; }
+  }));
+  renderNowBanner();
+}
+function updateJstClock(){
+  const el = document.getElementById('c-jst');
+  if(!el) return;
+  const fmt = new Intl.DateTimeFormat(undefined, {timeZone:'Asia/Tokyo', hour:'2-digit', minute:'2-digit'});
+  el.textContent = `${UI[lang].jst} · ${fmt.format(new Date())}`;
 }
 function showToast(msg){
   const t = document.getElementById('toast');
@@ -238,6 +302,29 @@ function renderHeader(){
   const howtoText = DATA.trip.howto && DATA.trip.howto[lang];
   howtoEl.textContent = howtoText || '';
   howtoEl.style.display = howtoText ? 'block' : 'none';
+
+  updateJstClock();
+}
+
+function renderNowBanner(){
+  const el = document.getElementById('c-now');
+  if(todayIdx === null){ el.style.display = 'none'; return; }
+  const p = DATA.points[todayIdx];
+  const chips = nowWeather.filter(w => w.ok).map(w => {
+    const label = w.p.n === p.n ? UI[lang].now : esc(w.p.date[lang]);
+    return `<span class="wxchip">${label} ${weatherEmoji(w.code)} <b>${Math.round(w.tmax)}°</b>/${Math.round(w.tmin)}°</span>`;
+  }).join('');
+  el.innerHTML = `
+    <div class="now-head">
+      <div>
+        <div class="now-label">${esc(UI[lang].now)}</div>
+        <div class="now-title">${esc(p.title[lang])} · ${esc(p.place[lang])}</div>
+      </div>
+      <button type="button" class="now-see" id="now-see-btn">${esc(UI[lang].seeOnMap)}</button>
+    </div>
+    <div class="wxstrip">${chips}</div>`;
+  el.style.display = 'block';
+  document.getElementById('now-see-btn').onclick = () => focusDay(todayIdx);
 }
 
 function renderLegend(){
@@ -255,12 +342,30 @@ function renderDayList(){
         <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}${idx===todayIdx?` <span class="today-tag">${UI[lang].today}</span>`:''}</span>
       </span>
     </div>`).join('');
-  document.querySelectorAll('.dayrow').forEach(row => row.onclick = () => {
-    const idx = +row.dataset.idx;
-    const p = DATA.points[idx];
-    map.flyTo([p.lat, p.lon], 8, {duration:.6});
-    markers[idx].openPopup();
-  });
+  document.querySelectorAll('.dayrow').forEach(row => row.onclick = () => focusDay(+row.dataset.idx));
+}
+
+function focusDay(idx, immediate){
+  const p = DATA.points[idx];
+  if(immediate) map.setView([p.lat, p.lon], 9);
+  else map.flyTo([p.lat, p.lon], 8, {duration:.6});
+  markers[idx].openPopup();
+}
+
+function updateUrlForDay(n){
+  const url = new URL(location.href);
+  url.searchParams.set('jour', n);
+  history.replaceState(null, '', url);
+}
+
+function applyDeepLink(){
+  const params = new URLSearchParams(location.search);
+  const jour = parseInt(params.get('jour'), 10);
+  if(Number.isNaN(jour)) return false;
+  const idx = DATA.points.findIndex(p => p.n === jour);
+  if(idx < 0) return false;
+  focusDay(idx, true);
+  return true;
 }
 
 function renderGallery(){
@@ -297,15 +402,11 @@ function initMap(){
       iconSize: [26,26], iconAnchor: [13,13], popupAnchor: [0,-13]
     });
     const m = L.marker([p.lat, p.lon], {icon}).addTo(map).bindPopup(popupHtml(p, idx));
+    m.on('popupopen', () => updateUrlForDay(p.n));
     markers.push(m);
   });
 
   map.fitBounds(polyline.getBounds(), {padding:[30,30]});
-  if(todayIdx !== null){
-    const p = DATA.points[todayIdx];
-    map.setView([p.lat, p.lon], 9);
-    markers[todayIdx].openPopup();
-  }
 }
 
 function renderAll(){
@@ -314,6 +415,7 @@ function renderAll(){
   renderDayList();
   renderMarkers();
   renderGallery();
+  renderNowBanner();
 }
 
 let lb = {pointIdx:null, photoIdx:0};
@@ -375,6 +477,8 @@ fetch('points.json')
     todayIdx = findTodayIndex();
     initMap();
     renderAll();
+    if(!applyDeepLink() && todayIdx !== null) focusDay(todayIdx, true);
+    loadNowWeather();
   })
   .catch(err => {
     document.getElementById('map').innerHTML =
@@ -383,6 +487,14 @@ fetch('points.json')
       + 'Ouvre ce dossier avec un petit serveur local (ex. <code>python3 -m http.server</code>) plutôt que de double-cliquer le fichier, ou teste directement une fois publié sur GitHub Pages.'
       + '</div>';
   });
+
+setInterval(updateJstClock, 60000);
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>

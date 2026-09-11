@@ -3,17 +3,20 @@
   "title": {
    "fr": "Japon 2026 — notre voyage",
    "en": "Japan 2026 — our trip",
-   "nl": "Japan 2026 — onze reis"
+   "nl": "Japan 2026 — onze reis",
+   "km": "ជប៉ុន ២០២៦ — ដំណើរកម្សាន្តរបស់យើង"
   },
   "sub": {
    "fr": "11 → 30 septembre 2026 · trois voyageuses",
    "en": "11 → 30 September 2026 · three travellers",
-   "nl": "11 → 30 september 2026 · drie reizigers"
+   "nl": "11 → 30 september 2026 · drie reizigers",
+   "km": "១១ → ៣០ កញ្ញា ២០២៦ · អ្នកដំណើរបីនាក់"
   },
   "welcome": {
    "fr": "Bienvenue sur la page pour nous suivre. Je vais essayer de mettre à jour quand j'ai envie et si pas de contraintes techniques. Hâte de retourner dans mon pays préféré !",
    "en": "Welcome to the page where you can follow us. I'll try to update it whenever I feel like it, technical hiccups permitting. Can't wait to be back in my favourite country!",
-   "nl": "Welkom op de pagina om ons te volgen. Ik probeer bij te werken wanneer ik er zin in heb, technische haperingen daargelaten. Ik kan niet wachten om terug te zijn in mijn favoriete land!"
+   "nl": "Welkom op de pagina om ons te volgen. Ik probeer bij te werken wanneer ik er zin in heb, technische haperingen daargelaten. Ik kan niet wachten om terug te zijn in mijn favoriete land!",
+   "km": "សូមស្វាគមន៍មកកាន់ទំព័រនេះដើម្បីតាមដានពួកយើង។ ខ្ញុំនឹងព្យាយាមធ្វើបច្ចុប្បន្នភាពនៅពេលដែលខ្ញុំមានអារម្មណ៍ចង់ធ្វើ ដរាបណាគ្មានបញ្ហាបច្ចេកទេស។ ចាំមិនបានទេក្នុងការវិលត្រឡប់ទៅកាន់ប្រទេសដែលខ្ញុំចូលចិត្តជាងគេ!"
   }
  },
  "legend": {
@@ -21,7 +24,8 @@
    "name": {
     "fr": "Kyoto",
     "en": "Kyoto",
-    "nl": "Kyoto"
+    "nl": "Kyoto",
+    "km": "ក្យូតូ"
    },
    "color": "#9257b2"
   },
@@ -29,7 +33,8 @@
    "name": {
     "fr": "Nara",
     "en": "Nara",
-    "nl": "Nara"
+    "nl": "Nara",
+    "km": "ណារ៉ា"
    },
    "color": "#00876f"
   },
@@ -37,7 +42,8 @@
    "name": {
     "fr": "Osaka",
     "en": "Osaka",
-    "nl": "Osaka"
+    "nl": "Osaka",
+    "km": "អូសាកា"
    },
    "color": "#c56a18"
   },
@@ -45,7 +51,8 @@
    "name": {
     "fr": "Sapporo",
     "en": "Sapporo",
-    "nl": "Sapporo"
+    "nl": "Sapporo",
+    "km": "សាប៉ូរ៉ូ"
    },
    "color": "#0e7fb8"
   },
@@ -53,7 +60,8 @@
    "name": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "color": "#c73344"
   },
@@ -61,7 +69,8 @@
    "name": {
     "fr": "Vol",
     "en": "Flight",
-    "nl": "Vlucht"
+    "nl": "Vlucht",
+    "km": "ជើងហោះហើរ"
    },
    "color": "#6b6a75"
   }
@@ -72,46 +81,54 @@
    "date": {
     "fr": "Ven 11 sept.",
     "en": "Fri 11 Sept",
-    "nl": "Vr 11 sept"
+    "nl": "Vr 11 sept",
+    "km": "សុក្រ ១១ កញ្ញា"
    },
    "city": "vol",
    "color": "#6b6a75",
    "place": {
     "fr": "Lyon",
     "en": "Lyon",
-    "nl": "Lyon"
+    "nl": "Lyon",
+    "km": "លីយ៉ុង"
    },
    "lat": 45.764,
    "lon": 4.8357,
    "title": {
     "fr": "Départ de Lyon",
     "en": "Leaving Lyon",
-    "nl": "Vertrek uit Lyon"
+    "nl": "Vertrek uit Lyon",
+    "km": "ការចាកចេញពីលីយ៉ុង"
    },
    "items": [
     {
      "fr": "Journée libre à Lyon, derniers préparatifs",
      "en": "A free day in Lyon, final preparations",
-     "nl": "Vrije dag in Lyon, laatste voorbereidingen"
+     "nl": "Vrije dag in Lyon, laatste voorbereidingen",
+     "km": "ថ្ងៃទំនេរនៅលីយ៉ុង ត្រៀមរៀបចំចុងក្រោយ"
     },
     {
      "fr": "Départ pour l'aéroport en fin d'après-midi",
      "en": "Off to the airport in the late afternoon",
-     "nl": "Eind namiddag naar de luchthaven"
+     "nl": "Eind namiddag naar de luchthaven",
+     "km": "ចេញទៅព្រលានយន្តហោះនៅចុងបញ្ចប់រសៀល"
     },
     {
      "fr": "Décollage à 18h50, escale de trois heures à Istanbul",
      "en": "Take-off at 18:50, a three-hour stopover in Istanbul",
-     "nl": "Vertrek om 18.50 uur, drie uur overstap in Istanbul"
+     "nl": "Vertrek om 18.50 uur, drie uur overstap in Istanbul",
+     "km": "ហោះហើរនៅម៉ោង ១៨:៥០ ចតឈប់នៅអ៊ីស្តង់ប៊ុលរយៈពេលបីម៉ោង"
     }
    ],
    "tr": null,
    "photos": [
     "photos/01-1000044858-n9cn0.jpg"
-   ], "note": {
- "fr": "Après notre course matinale à Lyon, derniers préparatifs avant le grand départ. Alerte aux fortes intempéries 😅 mais hâte de partir.",
- "en": "After our morning run in Lyon, final preparations before the big departure. A severe weather warning is in effect 😅 but we can't wait to leave.",
- "nl": "Na onze ochtendloop in Lyon, laatste voorbereidingen voor het grote vertrek. Waarschuwing voor zwaar weer 😅 maar we kunnen niet wachten om te vertrekken."
+   ],
+   "note": {
+    "fr": "Après notre course matinale à Lyon, derniers préparatifs avant le grand départ. Alerte aux fortes intempéries 😅 mais hâte de partir.",
+    "en": "After our morning run in Lyon, final preparations before the big departure. A severe weather warning is in effect 😅 but we can't wait to leave.",
+    "nl": "Na onze ochtendloop in Lyon, laatste voorbereidingen voor het grote vertrek. Waarschuwing voor zwaar weer 😅 maar we kunnen niet wachten om te vertrekken.",
+    "km": "បន្ទាប់ពីការរត់ប្រណាំងពេលព្រឹកនៅលីយ៉ុង យើងបានត្រៀមរៀបចំចុងក្រោយមុននឹងចេញដំណើរ។ មានការព្រមានពីអាកាសធាតុអាក្រក់ខ្លាំង 😅 ប៉ុន្តែរង់ចាំមិនបានទេក្នុងការចេញដំណើរ។"
    }
   },
   {
@@ -119,43 +136,50 @@
    "date": {
     "fr": "Sam 12 sept.",
     "en": "Sat 12 Sept",
-    "nl": "Za 12 sept"
+    "nl": "Za 12 sept",
+    "km": "សៅរ៍ ១២ កញ្ញា"
    },
    "city": "kyoto",
    "color": "#9257b2",
    "place": {
     "fr": "Kyoto",
     "en": "Kyoto",
-    "nl": "Kyoto"
+    "nl": "Kyoto",
+    "km": "ក្យូតូ"
    },
    "lat": 34.9858,
    "lon": 135.7588,
    "title": {
     "fr": "Arrivée au Japon",
     "en": "Arriving in Japan",
-    "nl": "Aankomst in Japan"
+    "nl": "Aankomst in Japan",
+    "km": "ការមកដល់ប្រទេសជប៉ុន"
    },
    "items": [
     {
      "fr": "Dix heures et demie de vol au-dessus de l'Asie, arrivée à Osaka en début de soirée",
      "en": "Ten and a half hours over Asia, landing in Osaka in the early evening",
-     "nl": "Tienenhalf uur boven Azië, landing in Osaka in de vroege avond"
+     "nl": "Tienenhalf uur boven Azië, landing in Osaka in de vroege avond",
+     "km": "ការហោះហើរដប់ម៉ោងកន្លះលើទ្វីបអាស៊ី ចុះចតនៅអូសាកានៅដើមល្ងាច"
     },
     {
      "fr": "Train express direct vers Kyoto, environ quatre-vingts minutes",
      "en": "Direct express train to Kyoto, about eighty minutes",
-     "nl": "Directe sneltrein naar Kyoto, ongeveer tachtig minuten"
+     "nl": "Directe sneltrein naar Kyoto, ongeveer tachtig minuten",
+     "km": "រថភ្លើងល្បឿនលឿនផ្ទាល់ទៅក្យូតូ ប្រហែលប៉ែតសិបនាទី"
     },
     {
      "fr": "Installation à l'hôtel et premier repas japonais — sans doute au konbini du coin",
      "en": "Checking in and a first Japanese meal — probably from the convenience store round the corner",
-     "nl": "Inchecken en een eerste Japanse maaltijd — waarschijnlijk uit de buurtsupermarkt"
+     "nl": "Inchecken en een eerste Japanse maaltijd — waarschijnlijk uit de buurtsupermarkt",
+     "km": "ចុះឈ្មោះចូលសណ្ឋាគារ និងអាហារជប៉ុនដំបូង — ប្រហែលជាទិញពីហាងទំនិញកាំង្ហក់ក្បែរនោះ"
     }
    ],
    "tr": {
     "fr": "L'aéroport du Kansai est bâti sur une île artificielle en pleine baie d'Osaka.",
     "en": "Kansai airport is built on an artificial island in the middle of Osaka Bay.",
-    "nl": "De luchthaven van Kansai ligt op een kunstmatig eiland midden in de baai van Osaka."
+    "nl": "De luchthaven van Kansai ligt op een kunstmatig eiland midden in de baai van Osaka.",
+    "km": "ព្រលានយន្តហោះកានសៃត្រូវបានសាងសង់នៅលើកោះសិប្បនិម្មិត កណ្តាលឈូងសមុទ្រអូសាកា។"
    },
    "photos": []
   },
@@ -164,47 +188,55 @@
    "date": {
     "fr": "Dim 13 sept.",
     "en": "Sun 13 Sept",
-    "nl": "Zo 13 sept"
+    "nl": "Zo 13 sept",
+    "km": "អាទិត្យ ១៣ កញ្ញា"
    },
    "city": "kyoto",
    "color": "#9257b2",
    "place": {
     "fr": "Kyoto",
     "en": "Kyoto",
-    "nl": "Kyoto"
+    "nl": "Kyoto",
+    "km": "ក្យូតូ"
    },
    "lat": 34.9671,
    "lon": 135.7727,
    "title": {
     "fr": "Mille portails et une forêt de bambous",
     "en": "A thousand gates and a bamboo forest",
-    "nl": "Duizend poorten en een bamboebos"
+    "nl": "Duizend poorten en een bamboebos",
+    "km": "ទ្វារមួយពាន់ និងព្រៃឫស្សី"
    },
    "items": [
     {
      "fr": "Fushimi Inari au petit matin : des milliers de portails vermillon qui montent à flanc de colline",
      "en": "Fushimi Inari at first light: thousands of vermilion gates climbing the hillside",
-     "nl": "Fushimi Inari bij dageraad: duizenden vermiljoenrode poorten die de heuvel op klimmen"
+     "nl": "Fushimi Inari bij dageraad: duizenden vermiljoenrode poorten die de heuvel op klimmen",
+     "km": "វត្តហ៊្វូស៊ីមីអ៊ីណារីនៅព្រឹកព្រលឹម៖ ទ្វារពណ៌ក្រហមរាប់ពាន់ឡើងតាមជម្រាលភ្នំ"
     },
     {
      "fr": "Tōfuku-ji, temple zen et son pont au-dessus d'une vallée d'érables",
      "en": "Tōfuku-ji, a Zen temple with its bridge over a maple valley",
-     "nl": "Tōfuku-ji, zentempel met zijn brug over een esdoorndal"
+     "nl": "Tōfuku-ji, zentempel met zijn brug over een esdoorndal",
+     "km": "វត្តតូហ្វុគូជិ វត្តហ្សិន ជាមួយស្ពានលើជ្រលងភ្នំដើមម៉េផល"
     },
     {
      "fr": "Sieste obligatoire : trente degrés et le décalage horaire encore là",
      "en": "A compulsory nap: thirty degrees and the jet lag still with us",
-     "nl": "Verplichte siësta: dertig graden en de jetlag nog volop aanwezig"
+     "nl": "Verplichte siësta: dertig graden en de jetlag nog volop aanwezig",
+     "km": "ការគេងថ្ងៃត្រង់ចាំបាច់៖ សីតុណ្ហភាព ៣០ អង្សា និងអារម្មណ៍ខុសម៉ោងនៅតែមាន"
     },
     {
      "fr": "Arashiyama en fin d'après-midi : bambouseraie, temple Tenryū-ji, pont Togetsu-kyō",
      "en": "Arashiyama late in the day: bamboo grove, Tenryū-ji temple, Togetsu-kyō bridge",
-     "nl": "Arashiyama laat in de dag: bamboebos, Tenryū-ji-tempel, Togetsu-kyō-brug"
+     "nl": "Arashiyama laat in de dag: bamboebos, Tenryū-ji-tempel, Togetsu-kyō-brug",
+     "km": "អារ៉ាស៊ីយ៉ាម៉ានៅចុងថ្ងៃ៖ ព្រៃឫស្សី វត្តតិនរីជិ ស្ពានតូហ្គេស៊ូក្យូ"
     },
     {
      "fr": "Dîner sur une terrasse en bois suspendue au-dessus de la rivière — une tradition qui s'arrête le 30 septembre",
      "en": "Dinner on a wooden terrace suspended over the river — a tradition that ends on 30 September",
-     "nl": "Diner op een houten terras boven de rivier — een traditie die op 30 september eindigt"
+     "nl": "Diner op een houten terras boven de rivier — een traditie die op 30 september eindigt",
+     "km": "អាហារពេលល្ងាចនៅលើកម្រាលឈើព្យួរលើទន្លេ — ប្រពៃណីមួយដែលបញ្ចប់នៅថ្ងៃទី៣០ ខែកញ្ញា"
     }
    ],
    "tr": null,
@@ -215,42 +247,49 @@
    "date": {
     "fr": "Lun 14 sept.",
     "en": "Mon 14 Sept",
-    "nl": "Ma 14 sept"
+    "nl": "Ma 14 sept",
+    "km": "ចន្ទ ១៤ កញ្ញា"
    },
    "city": "kyoto",
    "color": "#9257b2",
    "place": {
     "fr": "Kyoto",
     "en": "Kyoto",
-    "nl": "Kyoto"
+    "nl": "Kyoto",
+    "km": "ក្យូតូ"
    },
    "lat": 34.9929,
-   "lon": 135.7850,
+   "lon": 135.785,
    "title": {
     "fr": "Le Kyoto des cartes postales",
     "en": "Postcard Kyoto",
-    "nl": "Het Kyoto van de ansichtkaarten"
+    "nl": "Het Kyoto van de ansichtkaarten",
+    "km": "ក្យូតូដូចក្នុងបណ្ណប្រៃសណីយ៍"
    },
    "items": [
     {
      "fr": "Kiyomizu-dera et sa terrasse de bois sur pilotis, montée sans un seul clou",
      "en": "Kiyomizu-dera and its wooden stilted terrace, built without a single nail",
-     "nl": "Kiyomizu-dera met zijn houten terras op palen, gebouwd zonder één spijker"
+     "nl": "Kiyomizu-dera met zijn houten terras op palen, gebouwd zonder één spijker",
+     "km": "វត្តគីយ៉ូមីស៊ូជិ ជាមួយកម្រាលឈើលើសសរដែលសាងសង់ដោយគ្មានដែកគោលមួយសោះ"
     },
     {
      "fr": "Descente par Sannenzaka et Ninenzaka, deux ruelles pavées bordées de maisons basses",
      "en": "Down through Sannenzaka and Ninenzaka, two cobbled lanes lined with low houses",
-     "nl": "Afdaling via Sannenzaka en Ninenzaka, twee geplaveide steegjes met lage huizen"
+     "nl": "Afdaling via Sannenzaka en Ninenzaka, twee geplaveide steegjes met lage huizen",
+     "km": "ចុះតាមផ្លូវសាណិនហ្សាកា និងនីនិនហ្សាកា ជាផ្លូវក្រាលថ្មពីរស្ថិតនៅតាមផ្ទះទាបៗ"
     },
     {
      "fr": "Le Chemin des philosophes : deux kilomètres le long d'un canal, jusqu'au Pavillon d'argent",
      "en": "The Philosopher's Path: two kilometres along a canal to the Silver Pavilion",
-     "nl": "Het Filosofenpad: twee kilometer langs een kanaal tot aan het Zilveren Paviljoen"
+     "nl": "Het Filosofenpad: twee kilometer langs een kanaal tot aan het Zilveren Paviljoen",
+     "km": "ផ្លូវរបស់អ្នកទស្សនវិទូ៖ ចម្ងាយពីរគីឡូម៉ែត្រតាមប្រឡាយទឹកទៅដល់វិមានប្រាក់"
     },
     {
      "fr": "Peut-être une cérémonie du thé en fin d'après-midi",
      "en": "Perhaps a tea ceremony in the late afternoon",
-     "nl": "Misschien een theeceremonie in de late namiddag"
+     "nl": "Misschien een theeceremonie in de late namiddag",
+     "km": "ប្រហែលជាមានពិធីតែនៅចុងបញ្ចប់រសៀល"
     }
    ],
    "tr": null,
@@ -261,42 +300,49 @@
    "date": {
     "fr": "Mar 15 sept.",
     "en": "Tue 15 Sept",
-    "nl": "Di 15 sept"
+    "nl": "Di 15 sept",
+    "km": "អង្គារ ១៥ កញ្ញា"
    },
    "city": "nara",
    "color": "#00876f",
    "place": {
     "fr": "Nara",
     "en": "Nara",
-    "nl": "Nara"
+    "nl": "Nara",
+    "km": "ណារ៉ា"
    },
    "lat": 34.6851,
    "lon": 135.8048,
    "title": {
     "fr": "La ville aux cerfs",
     "en": "The city of deer",
-    "nl": "De stad van de herten"
+    "nl": "De stad van de herten",
+    "km": "ទីក្រុងសត្វក្តាន់"
    },
    "items": [
     {
      "fr": "Quarante-cinq minutes de train : Nara fut la capitale du Japon avant Kyoto",
      "en": "Forty-five minutes by train: Nara was Japan's capital before Kyoto",
-     "nl": "Vijfenveertig minuten met de trein: Nara was de hoofdstad van Japan vóór Kyoto"
+     "nl": "Vijfenveertig minuten met de trein: Nara was de hoofdstad van Japan vóór Kyoto",
+     "km": "ជិះរថភ្លើងចំនួនសែសិបប្រាំនាទី៖ ណារ៉ាធ្លាប់ជារាជធានីជប៉ុនមុនក្យូតូ"
     },
     {
      "fr": "Naramachi, quartier de maisons de marchands en bois",
      "en": "Naramachi, a district of wooden merchant houses",
-     "nl": "Naramachi, een wijk met houten koopmanshuizen"
+     "nl": "Naramachi, een wijk met houten koopmanshuizen",
+     "km": "ណារ៉ាម៉ាឈិ សង្កាត់នៃផ្ទះឈើរបស់ពាណិជ្ជករ"
     },
     {
      "fr": "Le parc et ses mille deux cents cerfs en liberté — ils s'inclinent pour réclamer un biscuit",
      "en": "The park and its twelve hundred free-roaming deer — they bow to ask for a biscuit",
-     "nl": "Het park met twaalfhonderd loslopende herten — ze buigen om een koekje te vragen"
+     "nl": "Het park met twaalfhonderd loslopende herten — ze buigen om een koekje te vragen",
+     "km": "សួនច្បារជាមួយសត្វក្តាន់ដើរដោយសេរីចំនួនមួយពាន់ពីររយក្បាល — ពួកវាឱនក្បាលសុំនំខេត"
     },
     {
      "fr": "Tōdai-ji : un Bouddha de bronze de quinze mètres, coulé au VIIIᵉ siècle, sous une charpente colossale",
      "en": "Tōdai-ji: a fifteen-metre bronze Buddha, cast in the 8th century, under a colossal timber frame",
-     "nl": "Tōdai-ji: een bronzen Boeddha van vijftien meter uit de 8e eeuw, onder een kolossaal houten dak"
+     "nl": "Tōdai-ji: een bronzen Boeddha van vijftien meter uit de 8e eeuw, onder een kolossaal houten dak",
+     "km": "វត្តតូដៃជិ៖ ព្រះពុទ្ធរូបលង្ហិនកម្ពស់ដប់ប្រាំម៉ែត្រ ចាក់ពីសតវត្សទី៨ ក្រោមរចនាសម្ព័ន្ធឈើដ៏ធំសម្បើម"
     }
    ],
    "tr": null,
@@ -307,42 +353,49 @@
    "date": {
     "fr": "Mer 16 sept.",
     "en": "Wed 16 Sept",
-    "nl": "Wo 16 sept"
+    "nl": "Wo 16 sept",
+    "km": "ពុធ ១៦ កញ្ញា"
    },
    "city": "osaka",
    "color": "#c56a18",
    "place": {
     "fr": "Osaka",
     "en": "Osaka",
-    "nl": "Osaka"
+    "nl": "Osaka",
+    "km": "អូសាកា"
    },
    "lat": 34.6688,
    "lon": 135.5019,
    "title": {
     "fr": "Adieu Kyoto, bonjour les néons",
     "en": "Goodbye Kyoto, hello neon",
-    "nl": "Vaarwel Kyoto, hallo neon"
+    "nl": "Vaarwel Kyoto, hallo neon",
+    "km": "លាក្យូតូ ជម្រាបសួរភ្លើងណេអុង"
    },
    "items": [
     {
      "fr": "Dernière matinée à Kyoto : Kennin-ji, le plus ancien temple zen de la ville, et les ruelles de Gion",
      "en": "A last morning in Kyoto: Kennin-ji, the city's oldest Zen temple, and the lanes of Gion",
-     "nl": "Laatste ochtend in Kyoto: Kennin-ji, de oudste zentempel van de stad, en de steegjes van Gion"
+     "nl": "Laatste ochtend in Kyoto: Kennin-ji, de oudste zentempel van de stad, en de steegjes van Gion",
+     "km": "ព្រឹកចុងក្រោយនៅក្យូតូ៖ វត្តកិននិនជិ វត្តហ្សិនចាស់ជាងគេនៃទីក្រុង និងផ្លូវតូចៗនៃសង្កាត់ហ្គីអុន"
     },
     {
      "fr": "Le Musée Nintendo, ouvert en 2024 dans une ancienne usine de cartes à jouer",
      "en": "The Nintendo Museum, opened in 2024 in a former playing-card factory",
-     "nl": "Het Nintendo Museum, in 2024 geopend in een oude speelkaartenfabriek"
+     "nl": "Het Nintendo Museum, in 2024 geopend in een oude speelkaartenfabriek",
+     "km": "សារមន្ទីរនិនតង់ដូ បើកនៅឆ្នាំ២០២៤ ក្នុងរោងចក្រកាតលេងចាស់"
     },
     {
      "fr": "Train vers Osaka en fin d'après-midi",
      "en": "Train to Osaka in the late afternoon",
-     "nl": "Trein naar Osaka in de late namiddag"
+     "nl": "Trein naar Osaka in de late namiddag",
+     "km": "រថភ្លើងទៅអូសាកានៅចុងបញ្ចប់រសៀល"
     },
     {
      "fr": "Premier soir à Dōtonbori : néons sur trois étages, foule dense, odeur de friture",
      "en": "First evening in Dōtonbori: three storeys of neon, dense crowds, the smell of frying",
-     "nl": "Eerste avond in Dōtonbori: drie verdiepingen neon, dichte massa, geur van gefrituurd eten"
+     "nl": "Eerste avond in Dōtonbori: drie verdiepingen neon, dichte massa, geur van gefrituurd eten",
+     "km": "ល្ងាចដំបូងនៅដូតុនបូរី៖ ភ្លើងណេអុងបីជាន់ បណ្តាជនច្រើនកកកុញ ក្លិនចៀនអាហារ"
     }
    ],
    "tr": null,
@@ -353,37 +406,43 @@
    "date": {
     "fr": "Jeu 17 sept.",
     "en": "Thu 17 Sept",
-    "nl": "Do 17 sept"
+    "nl": "Do 17 sept",
+    "km": "ព្រហស្បតិ៍ ១៧ កញ្ញា"
    },
    "city": "osaka",
    "color": "#c56a18",
    "place": {
     "fr": "Himeji",
     "en": "Himeji",
-    "nl": "Himeji"
+    "nl": "Himeji",
+    "km": "ហ៊ីម៉េជិ"
    },
    "lat": 34.8154,
    "lon": 134.6855,
    "title": {
     "fr": "Le Héron blanc",
     "en": "The White Heron",
-    "nl": "De Witte Reiger"
+    "nl": "De Witte Reiger",
+    "km": "សត្វក្រៀលពណ៌ស"
    },
    "items": [
     {
      "fr": "Une heure de train vers l'ouest jusqu'à Himeji",
      "en": "An hour west by train to Himeji",
-     "nl": "Een uur met de trein westwaarts naar Himeji"
+     "nl": "Een uur met de trein westwaarts naar Himeji",
+     "km": "ជិះរថភ្លើងមួយម៉ោងទៅទិសខាងលិចដល់ហ៊ីម៉េជិ"
     },
     {
      "fr": "Le château de Himeji : cinq étages de bois et de plâtre blanc, jamais brûlé, jamais bombardé, jamais reconstruit",
      "en": "Himeji Castle: five storeys of timber and white plaster, never burnt, never bombed, never rebuilt",
-     "nl": "Kasteel Himeji: vijf verdiepingen hout en witte pleister, nooit afgebrand, nooit gebombardeerd, nooit herbouwd"
+     "nl": "Kasteel Himeji: vijf verdiepingen hout en witte pleister, nooit afgebrand, nooit gebombardeerd, nooit herbouwd",
+     "km": "បន្ទាយហ៊ីម៉េជិ៖ ប្រាសាទឈើប្រាំជាន់លាបពណ៌ស មិនដែលឆេះ មិនដែលត្រូវគ្រាប់បែក មិនដែលកសាងឡើងវិញ"
     },
     {
      "fr": "Kobe l'après-midi si l'énergie suit : le bœuf de Kobe et le quartier des maisons occidentales",
      "en": "Kobe in the afternoon if energy allows: Kobe beef and the Western-house quarter",
-     "nl": "Kobe in de namiddag als de energie het toelaat: Kobe-rundvlees en de wijk met westerse huizen"
+     "nl": "Kobe in de namiddag als de energie het toelaat: Kobe-rundvlees en de wijk met westerse huizen",
+     "km": "កូបេនៅរសៀលបើមានកម្លាំង៖ សាច់គោកូបេ និងសង្កាត់ផ្ទះបែបលោកខាងលិច"
     }
    ],
    "tr": null,
@@ -394,47 +453,55 @@
    "date": {
     "fr": "Ven 18 sept.",
     "en": "Fri 18 Sept",
-    "nl": "Vr 18 sept"
+    "nl": "Vr 18 sept",
+    "km": "សុក្រ ១៨ កញ្ញា"
    },
    "city": "osaka",
    "color": "#c56a18",
    "place": {
     "fr": "Osaka",
     "en": "Osaka",
-    "nl": "Osaka"
+    "nl": "Osaka",
+    "km": "អូសាកា"
    },
    "lat": 34.6125,
    "lon": 135.4934,
    "title": {
     "fr": "Manger, marcher, tremper",
     "en": "Eat, walk, soak",
-    "nl": "Eten, wandelen, weken"
+    "nl": "Eten, wandelen, weken",
+    "km": "បរិភោគ ដើរ ជ្រលក់ទឹក"
    },
    "items": [
     {
      "fr": "Kuromon Ichiba au matin : une halle couverte où l'on grille les coquilles Saint-Jacques devant vous",
      "en": "Kuromon Ichiba in the morning: a covered market where scallops are grilled in front of you",
-     "nl": "Kuromon Ichiba in de ochtend: een overdekte markt waar sint-jakobsschelpen voor je neus worden gegrild"
+     "nl": "Kuromon Ichiba in de ochtend: een overdekte markt waar sint-jakobsschelpen voor je neus worden gegrild",
+     "km": "ផ្សារគូរ៉ូម៉ុនអ៊ីជីបានៅព្រឹក៖ ផ្សារមានដំបូលដែលអាំងខ្យងស្កាឡុបនៅមុខភ្នែក"
     },
     {
      "fr": "Six cents mètres d'arcades commerçantes couvertes à Shinsaibashi",
      "en": "Six hundred metres of covered shopping arcades at Shinsaibashi",
-     "nl": "Zeshonderd meter overdekte winkelgalerijen in Shinsaibashi"
+     "nl": "Zeshonderd meter overdekte winkelgalerijen in Shinsaibashi",
+     "km": "ផ្លូវទិញឥវ៉ាន់ដែលមានដំបូលប្រវែងប្រាំមួយរយម៉ែត្រនៅស៊ីនសាយបាស៊ី"
     },
     {
      "fr": "Un musée qui reconstitue une rue de l'époque d'Edo, grandeur nature, à l'intérieur d'un immeuble",
      "en": "A museum recreating a full-scale Edo-era street inside a building",
-     "nl": "Een museum met een op ware grootte nagebouwde straat uit de Edo-periode, binnen in een gebouw"
+     "nl": "Een museum met een op ware grootte nagebouwde straat uit de Edo-periode, binnen in een gebouw",
+     "km": "សារមន្ទីរដែលស្ដារឡើងវិញនូវផ្លូវសម័យអេដូតាមទំហំពិត នៅក្នុងអគារ"
     },
     {
      "fr": "Un tramway des années 1950 jusqu'à Sumiyoshi Taisha, l'un des plus vieux sanctuaires du pays",
      "en": "A 1950s tram out to Sumiyoshi Taisha, one of the country's oldest shrines",
-     "nl": "Een tram uit de jaren 1950 naar Sumiyoshi Taisha, een van de oudste heiligdommen van het land"
+     "nl": "Een tram uit de jaren 1950 naar Sumiyoshi Taisha, een van de oudste heiligdommen van het land",
+     "km": "រថភ្លើងក្រុងសម័យទសវត្សឆ្នាំ១៩៥០ ទៅដល់វត្តស៊ូមីយ៉ូស៊ីតៃសា ជាវត្តចាស់ជាងគេមួយក្នុងប្រទេស"
     },
     {
      "fr": "Peut-être une soirée aux bains thermaux du quartier",
      "en": "Perhaps an evening at the neighbourhood bathhouse",
-     "nl": "Misschien een avond in de badhuizen van de buurt"
+     "nl": "Misschien een avond in de badhuizen van de buurt",
+     "km": "ប្រហែលជាមានល្ងាចមួយនៅផ្ទះងូតទឹកនៃសង្កាត់"
     }
    ],
    "tr": null,
@@ -445,37 +512,43 @@
    "date": {
     "fr": "Sam 19 sept.",
     "en": "Sat 19 Sept",
-    "nl": "Za 19 sept"
+    "nl": "Za 19 sept",
+    "km": "សៅរ៍ ១៩ កញ្ញា"
    },
    "city": "osaka",
    "color": "#c56a18",
    "place": {
     "fr": "Osaka",
     "en": "Osaka",
-    "nl": "Osaka"
+    "nl": "Osaka",
+    "km": "អូសាកា"
    },
    "lat": 34.6524,
    "lon": 135.5063,
    "title": {
     "fr": "Quatre tonnes lancées à pleine vitesse",
     "en": "Four tonnes at full speed",
-    "nl": "Vier ton op volle snelheid"
+    "nl": "Vier ton op volle snelheid",
+    "km": "បួនតោនប្រញាប់ពេញល្បឿន"
    },
    "items": [
     {
      "fr": "Peut-être le Danjiri Matsuri de Kishiwada : trente-quatre chars de bois de quatre tonnes tirés en courant, qui prennent les virages sans ralentir",
      "en": "Perhaps the Kishiwada Danjiri Matsuri: thirty-four four-tonne wooden floats hauled at a run, taking corners without slowing",
-     "nl": "Misschien het Danjiri Matsuri van Kishiwada: vierendertig houten wagens van vier ton, al rennend voortgetrokken, die de bochten nemen zonder af te remmen"
+     "nl": "Misschien het Danjiri Matsuri van Kishiwada: vierendertig houten wagens van vier ton, al rennend voortgetrokken, die de bochten nemen zonder af te remmen",
+     "km": "ប្រហែលជាមានពិធីបុណ្យដានជីរីនៃគីស៊ីវ៉ាដា៖ រទេះឈើសែសិបបួនគ្រឿង ទម្ងន់បួនតោនម្នាក់ៗ ត្រូវទាញរត់ ហើយបត់ជ្រុងដោយគ្មានថយល្បឿន"
     },
     {
      "fr": "Sinon : la tour Tsūtenkaku et Shinsekai, quartier resté dans les années 1950",
      "en": "Otherwise: Tsūtenkaku tower and Shinsekai, a district stuck in the 1950s",
-     "nl": "Anders: de Tsūtenkaku-toren en Shinsekai, een wijk die in de jaren 1950 is blijven hangen"
+     "nl": "Anders: de Tsūtenkaku-toren en Shinsekai, een wijk die in de jaren 1950 is blijven hangen",
+     "km": "បើពុំនោះទេ៖ ប៉មស៊ូតិនកាគូ និងស៊ីនសេកៃ សង្កាត់មួយនៅតែជាប់គាំងក្នុងទសវត្សឆ្នាំ១៩៥០"
     },
     {
      "fr": "Le soir, une tournée des échoppes de brochettes panées du quartier",
      "en": "In the evening, a crawl through the local skewer-and-batter stalls",
-     "nl": "'s Avonds een tocht langs de kraampjes met gepaneerde spiesjes"
+     "nl": "'s Avonds een tocht langs de kraampjes met gepaneerde spiesjes",
+     "km": "ពេលល្ងាច ដើរបំពេញលើកនួផ្សារលក់ខ្សៀកបំពងម្សៅតាមសង្កាត់"
     }
    ],
    "tr": null,
@@ -486,42 +559,49 @@
    "date": {
     "fr": "Dim 20 sept.",
     "en": "Sun 20 Sept",
-    "nl": "Zo 20 sept"
+    "nl": "Zo 20 sept",
+    "km": "អាទិត្យ ២០ កញ្ញា"
    },
    "city": "sapporo",
    "color": "#0e7fb8",
    "place": {
     "fr": "Sapporo",
     "en": "Sapporo",
-    "nl": "Sapporo"
+    "nl": "Sapporo",
+    "km": "សាប៉ូរ៉ូ"
    },
    "lat": 43.0686,
    "lon": 141.3508,
    "title": {
     "fr": "Mille kilomètres vers le nord",
     "en": "A thousand kilometres north",
-    "nl": "Duizend kilometer noordwaarts"
+    "nl": "Duizend kilometer noordwaarts",
+    "km": "ចម្ងាយមួយពាន់គីឡូម៉ែត្រទៅទិសខាងជើង"
    },
    "items": [
     {
      "fr": "Vol d'Osaka vers Hokkaidō, l'île du nord",
      "en": "Flight from Osaka to Hokkaidō, the northern island",
-     "nl": "Vlucht van Osaka naar Hokkaidō, het noordelijke eiland"
+     "nl": "Vlucht van Osaka naar Hokkaidō, het noordelijke eiland",
+     "km": "ជើងហោះហើរពីអូសាកាទៅហុកកៃដូ កោះខាងជើង"
     },
     {
      "fr": "Quinze degrés de moins qu'au départ : on change de saison en deux heures",
      "en": "Fifteen degrees colder than where we left: we change season in two hours",
-     "nl": "Vijftien graden kouder dan bij vertrek: we wisselen van seizoen in twee uur"
+     "nl": "Vijftien graden kouder dan bij vertrek: we wisselen van seizoen in twee uur",
+     "km": "ត្រជាក់ជាងកន្លែងចេញដំណើរដប់ប្រាំអង្សា៖ យើងប្តូរឥតុនៅក្នុងរយៈពេលពីរម៉ោង"
     },
     {
      "fr": "Sapporo n'a été bâtie qu'au XIXᵉ siècle : ses rues forment une grille numérotée, unique au Japon",
      "en": "Sapporo was only built in the 19th century: its streets form a numbered grid, unique in Japan",
-     "nl": "Sapporo werd pas in de 19e eeuw gebouwd: de straten vormen een genummerd raster, uniek in Japan"
+     "nl": "Sapporo werd pas in de 19e eeuw gebouwd: de straten vormen een genummerd raster, uniek in Japan",
+     "km": "សាប៉ូរ៉ូត្រូវបានសាងសង់តែនៅសតវត្សទី១៩៖ ផ្លូវរបស់ខ្លួនបង្កើតជាក្រឡាចត្រង្គមានលេខរៀង ដែលមានតែមួយគត់នៅជប៉ុន"
     },
     {
      "fr": "Premier dîner : le ramen au miso, inventé ici",
      "en": "First dinner: miso ramen, invented here",
-     "nl": "Eerste diner: miso-ramen, hier uitgevonden"
+     "nl": "Eerste diner: miso-ramen, hier uitgevonden",
+     "km": "អាហារល្ងាចដំបូង៖ រ៉ាម៉ិនមីសូ ដែលបង្កើតឡើងនៅទីនេះ"
     }
    ],
    "tr": null,
@@ -532,42 +612,49 @@
    "date": {
     "fr": "Lun 21 sept.",
     "en": "Mon 21 Sept",
-    "nl": "Ma 21 sept"
+    "nl": "Ma 21 sept",
+    "km": "ចន្ទ ២១ កញ្ញា"
    },
    "city": "sapporo",
    "color": "#0e7fb8",
    "place": {
     "fr": "Sapporo",
     "en": "Sapporo",
-    "nl": "Sapporo"
+    "nl": "Sapporo",
+    "km": "សាប៉ូរ៉ូ"
    },
    "lat": 43.0605,
    "lon": 141.3548,
    "title": {
     "fr": "Bière, agneau et gastronomie de rue",
     "en": "Beer, lamb and street food",
-    "nl": "Bier, lam en straateten"
+    "nl": "Bier, lam en straateten",
+    "km": "ស្រាបៀរ សាច់ចៀម និងម្ហូបតាមផ្លូវ"
    },
    "items": [
     {
      "fr": "Le musée de la bière, dans une malterie de brique rouge de 1876",
      "en": "The beer museum, in a red-brick malt house from 1876",
-     "nl": "Het biermuseum, in een roodstenen mouterij uit 1876"
+     "nl": "Het biermuseum, in een roodstenen mouterij uit 1876",
+     "km": "សារមន្ទីរស្រាបៀរ ក្នុងអគារឥដ្ឋក្រហមផលិតម៉ាល់តពីឆ្នាំ១៨៧៦"
     },
     {
      "fr": "Le jingisukan à midi : agneau grillé à volonté sur une plaque bombée, tablier obligatoire",
      "en": "Jingisukan for lunch: all-you-can-eat grilled lamb on a domed hotplate, apron compulsory",
-     "nl": "Jingisukan als lunch: onbeperkt gegrild lam op een bolle plaat, schort verplicht"
+     "nl": "Jingisukan als lunch: onbeperkt gegrild lam op een bolle plaat, schort verplicht",
+     "km": "ជីនជីស៊ូកានសម្រាប់អាហារថ្ងៃត្រង់៖ សាច់ចៀមអាំងបរិភោគគ្មានកំណត់លើផ្ទាំងក្តៅរាងកោង ត្រូវពាក់ស្បៃការពារជាកាតព្វកិច្ច"
     },
     {
      "fr": "Le Sapporo Autumn Fest : un kilomètre de parc occupé par trois cents stands de produits de tout Hokkaidō",
      "en": "The Sapporo Autumn Fest: a kilometre of park filled with three hundred stalls of produce from all over Hokkaidō",
-     "nl": "Het Sapporo Autumn Fest: een kilometer park vol driehonderd kraampjes met producten uit heel Hokkaidō"
+     "nl": "Het Sapporo Autumn Fest: een kilometer park vol driehonderd kraampjes met producten uit heel Hokkaidō",
+     "km": "ពិធីបុណ្យរដូវស្លឹកឈើជ្រុះសាប៉ូរ៉ូ៖ សួនច្បារប្រវែងមួយគីឡូម៉ែត្រ ពោរពេញដោយស្តង់លក់ផលិតផលបីរយពីទូទាំងហុកកៃដូ"
     },
     {
      "fr": "Jour férié au Japon — ce sera dense",
      "en": "A public holiday in Japan — it will be busy",
-     "nl": "Feestdag in Japan — het zal er druk zijn"
+     "nl": "Feestdag in Japan — het zal er druk zijn",
+     "km": "ថ្ងៃឈប់សម្រាកជាតិនៅជប៉ុន — នឹងមមាញឹកណាស់"
     }
    ],
    "tr": null,
@@ -578,42 +665,49 @@
    "date": {
     "fr": "Mar 22 sept.",
     "en": "Tue 22 Sept",
-    "nl": "Di 22 sept"
+    "nl": "Di 22 sept",
+    "km": "អង្គារ ២២ កញ្ញា"
    },
    "city": "sapporo",
    "color": "#0e7fb8",
    "place": {
     "fr": "Sapporo",
     "en": "Sapporo",
-    "nl": "Sapporo"
+    "nl": "Sapporo",
+    "km": "សាប៉ូរ៉ូ"
    },
    "lat": 43.0392,
    "lon": 141.3211,
    "title": {
     "fr": "La vue à trois étoiles",
     "en": "The three-star view",
-    "nl": "Het driesterrenuitzicht"
+    "nl": "Het driesterrenuitzicht",
+    "km": "ទេសភាពបីផ្កាយ"
    },
    "items": [
     {
      "fr": "Le marché Nijō au matin : des bols de riz couverts d'oursin, d'œufs de saumon et de crabe",
      "en": "Nijō market in the morning: rice bowls topped with sea urchin, salmon roe and crab",
-     "nl": "Nijō-markt in de ochtend: rijstkommen met zee-egel, zalmkuit en krab"
+     "nl": "Nijō-markt in de ochtend: rijstkommen met zee-egel, zalmkuit en krab",
+     "km": "ផ្សារនីចូនៅព្រឹក៖ ចានបាយដាក់លើដោយអសិតសមុទ្រ ស៊ុតត្រីសាម៉ុង និងក្ដាម"
     },
     {
      "fr": "Peut-être un atelier d'artisanat l'après-midi",
      "en": "Perhaps a craft workshop in the afternoon",
-     "nl": "Misschien een ambachtsworkshop in de namiddag"
+     "nl": "Misschien een ambachtsworkshop in de namiddag",
+     "km": "ប្រហែលជាមានសិក្ខាសាលាសិប្បកម្មនៅរសៀល"
     },
     {
      "fr": "Le mont Moiwa au coucher du soleil : téléphérique jusqu'à 531 mètres, et l'une des trois plus belles vues nocturnes du Japon",
      "en": "Mount Moiwa at sunset: cable car to 531 metres, and one of Japan's three finest night views",
-     "nl": "De berg Moiwa bij zonsondergang: kabelbaan tot 531 meter, en een van de drie mooiste nachtuitzichten van Japan"
+     "nl": "De berg Moiwa bij zonsondergang: kabelbaan tot 531 meter, en een van de drie mooiste nachtuitzichten van Japan",
+     "km": "ភ្នំម៉ូអ៊ីវ៉ានៅពេលថ្ងៃលិច៖ ជិះឡានខ្សែកាបចម្ងាយ៥៣១ម៉ែត្រ និងជាទេសភាពពេលយប់មួយក្នុងចំណោមទេសភាពស្រស់ស្អាតបំផុតបីនៅជប៉ុន"
     },
     {
      "fr": "Le soir, le soup curry — une soupe épicée née à Sapporo dans les années 1970",
      "en": "In the evening, soup curry — a spiced soup born in Sapporo in the 1970s",
-     "nl": "'s Avonds soup curry — een pittige soep die in de jaren 1970 in Sapporo ontstond"
+     "nl": "'s Avonds soup curry — een pittige soep die in de jaren 1970 in Sapporo ontstond",
+     "km": "ពេលល្ងាច ស៊ុបការី — ស៊ុបផ្សំគ្រឿងទេសកំណើតនៅសាប៉ូរ៉ូក្នុងទសវត្សឆ្នាំ១៩៧០"
     }
    ],
    "tr": null,
@@ -624,42 +718,49 @@
    "date": {
     "fr": "Mer 23 sept.",
     "en": "Wed 23 Sept",
-    "nl": "Wo 23 sept"
+    "nl": "Wo 23 sept",
+    "km": "ពុធ ២៣ កញ្ញា"
    },
    "city": "sapporo",
    "color": "#0e7fb8",
    "place": {
     "fr": "Jōzankei",
     "en": "Jōzankei",
-    "nl": "Jōzankei"
+    "nl": "Jōzankei",
+    "km": "ចូហ្សានកី"
    },
    "lat": 42.9686,
    "lon": 141.1372,
    "title": {
     "fr": "L'eau chaude dans la gorge",
     "en": "Hot water in the gorge",
-    "nl": "Warm water in de kloof"
+    "nl": "Warm water in de kloof",
+    "km": "ទឹកក្តៅនៅជ្រលងភ្នំ"
    },
    "items": [
     {
      "fr": "Une heure de bus dans la montagne jusqu'à Jōzankei, village thermal au fond d'une gorge",
      "en": "An hour by bus into the mountains to Jōzankei, a hot-spring village at the bottom of a gorge",
-     "nl": "Een uur met de bus de bergen in naar Jōzankei, een thermaal dorp onderin een kloof"
+     "nl": "Een uur met de bus de bergen in naar Jōzankei, een thermaal dorp onderin een kloof",
+     "km": "ជិះឡានក្រុងមួយម៉ោងចូលទៅក្នុងភ្នំដល់ចូហ្សានកី ភូមិទឹកក្តៅនៅបាតជ្រលងភ្នំ"
     },
     {
      "fr": "Bains japonais traditionnels, dont certains en plein air au bord de la rivière",
      "en": "Traditional Japanese baths, some of them outdoors beside the river",
-     "nl": "Traditionele Japanse baden, sommige in de openlucht aan de rivier"
+     "nl": "Traditionele Japanse baden, sommige in de openlucht aan de rivier",
+     "km": "បន្ទប់ងូតទឹកបែបប្រពៃណីជប៉ុន ខ្លះនៅខាងក្រៅជិតទន្លេ"
     },
     {
      "fr": "Bains de pieds gratuits en pleine rue et statues de kappa, le lutin des rivières",
      "en": "Free foot baths in the street and statues of kappa, the river sprite",
-     "nl": "Gratis voetbaden op straat en beelden van kappa, de riviergeest"
+     "nl": "Gratis voetbaden op straat en beelden van kappa, de riviergeest",
+     "km": "បន្ទប់ជ្រលក់ជើងឥតគិតថ្លៃនៅតាមផ្លូវ និងរូបចម្លាក់កាប៉ា វិញ្ញាណទន្លេ"
     },
     {
      "fr": "Trois semaines trop tôt pour les érables rouges : ce sera encore vert",
      "en": "Three weeks too early for the red maples: it will still be green",
-     "nl": "Drie weken te vroeg voor de rode esdoorns: het zal nog groen zijn"
+     "nl": "Drie weken te vroeg voor de rode esdoorns: het zal nog groen zijn",
+     "km": "មកមុនពេលបីសប្តាហ៍សម្រាប់ស្លឹកម៉េផលក្រហម៖ វានៅតែបៃតង"
     }
    ],
    "tr": null,
@@ -670,42 +771,49 @@
    "date": {
     "fr": "Jeu 24 sept.",
     "en": "Thu 24 Sept",
-    "nl": "Do 24 sept"
+    "nl": "Do 24 sept",
+    "km": "ព្រហស្បតិ៍ ២៤ កញ្ញា"
    },
    "city": "tokyo",
    "color": "#c73344",
    "place": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "lat": 35.7272,
    "lon": 139.7669,
    "title": {
     "fr": "Le vieux Tokyo",
     "en": "Old Tokyo",
-    "nl": "Het oude Tokio"
+    "nl": "Het oude Tokio",
+    "km": "តូក្យូបុរាណ"
    },
    "items": [
     {
      "fr": "Vol matinal de Sapporo à Tokyo",
      "en": "Early flight from Sapporo to Tokyo",
-     "nl": "Vroege vlucht van Sapporo naar Tokio"
+     "nl": "Vroege vlucht van Sapporo naar Tokio",
+     "km": "ជើងហោះហើរព្រឹកពីសាប៉ូរ៉ូទៅតូក្យូ"
     },
     {
      "fr": "Le quartier où nous dormons a échappé aux bombardements de 1945 : ruelles étroites, boutiques de famille, chats sur les murets",
      "en": "The district we are staying in escaped the 1945 bombings: narrow lanes, family shops, cats on the walls",
-     "nl": "De wijk waar we slapen ontsnapte aan de bombardementen van 1945: smalle steegjes, familiewinkels, katten op de muurtjes"
+     "nl": "De wijk waar we slapen ontsnapte aan de bombardementen van 1945: smalle steegjes, familiewinkels, katten op de muurtjes",
+     "km": "សង្កាត់ដែលយើងស្នាក់នៅរួចផុតពីការទម្លាក់គ្រាប់បែកឆ្នាំ១៩៤៥៖ ផ្លូវតូចចង្អៀត ហាងគ្រួសារ ឆ្មានៅលើជញ្ជាំង"
     },
     {
      "fr": "Yanaka Ginza, une rue commerçante de soixante mètres où l'on achète les croquettes à l'unité",
      "en": "Yanaka Ginza, a sixty-metre shopping street where croquettes are sold one at a time",
-     "nl": "Yanaka Ginza, een winkelstraat van zestig meter waar kroketten per stuk worden verkocht"
+     "nl": "Yanaka Ginza, een winkelstraat van zestig meter waar kroketten per stuk worden verkocht",
+     "km": "យ៉ាណាកាហ្គីនហ្សា ផ្លូវទិញឥវ៉ាន់ប្រវែងហុកសិបម៉ែត្រ ដែលលក់ក្រូកែតម្តងមួយៗ"
     },
     {
      "fr": "Le soir, une taverne installée sous les voies ferrées",
      "en": "In the evening, a tavern tucked under the railway arches",
-     "nl": "'s Avonds een kroeg onder de spoorwegbogen"
+     "nl": "'s Avonds een kroeg onder de spoorwegbogen",
+     "km": "ពេលល្ងាច ហាងស្រាមួយលាក់ខ្លួននៅក្រោមផ្លូវរថភ្លើង"
     }
    ],
    "tr": null,
@@ -716,42 +824,49 @@
    "date": {
     "fr": "Ven 25 sept.",
     "en": "Fri 25 Sept",
-    "nl": "Vr 25 sept"
+    "nl": "Vr 25 sept",
+    "km": "សុក្រ ២៥ កញ្ញា"
    },
    "city": "tokyo",
    "color": "#c73344",
    "place": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "lat": 35.7148,
    "lon": 139.7967,
    "title": {
     "fr": "Le temple et les lutteurs",
     "en": "The temple and the wrestlers",
-    "nl": "De tempel en de worstelaars"
+    "nl": "De tempel en de worstelaars",
+    "km": "វត្ត និងអ្នកចំបាប់ស៊ូម៉ូ"
    },
    "items": [
     {
      "fr": "Sensō-ji au petit matin, avant que la rue Nakamise ne se remplisse",
      "en": "Sensō-ji at first light, before Nakamise street fills up",
-     "nl": "Sensō-ji in de vroege ochtend, voordat de Nakamise-straat volloopt"
+     "nl": "Sensō-ji in de vroege ochtend, voordat de Nakamise-straat volloopt",
+     "km": "វត្តសិនសូជិនៅព្រឹកព្រលឹម មុនផ្លូវណាកាមីសេពោរពេញទៅដោយមនុស្ស"
     },
     {
      "fr": "Peut-être le tournoi de sumo de septembre : les lutteurs de première division entrent vers 15h40 en tabliers brodés",
      "en": "Perhaps the September sumo tournament: the top-division wrestlers enter around 15:40 in embroidered aprons",
-     "nl": "Misschien het sumotoernooi van september: de worstelaars uit de hoogste divisie komen rond 15.40 uur op in geborduurde schorten"
+     "nl": "Misschien het sumotoernooi van september: de worstelaars uit de hoogste divisie komen rond 15.40 uur op in geborduurde schorten",
+     "km": "ប្រហែលជាមានការប្រកួតស៊ូម៉ូខែកញ្ញា៖ អ្នកចំបាប់ស៊ូម៉ូថ្នាក់កំពូលចូលមកប្រហែលម៉ោង១៥:៤០ ស្លៀកខោអាវប៉ាក់ដេរ"
     },
     {
      "fr": "Shinjuku au coucher du soleil : l'observatoire gratuit au quarante-cinquième étage de l'hôtel de ville",
      "en": "Shinjuku at sunset: the free observation deck on the 45th floor of the city hall",
-     "nl": "Shinjuku bij zonsondergang: het gratis uitkijkplatform op de 45e verdieping van het stadhuis"
+     "nl": "Shinjuku bij zonsondergang: het gratis uitkijkplatform op de 45e verdieping van het stadhuis",
+     "km": "ស៊ីនជូគូនៅពេលថ្ងៃលិច៖ ទីតាំងសម្លឹងមើលឥតគិតថ្លៃនៅជាន់ទី៤៥ នៃសាលាក្រុង"
     },
     {
      "fr": "Le soir, les comptoirs de six places d'Omoide Yokochō",
      "en": "In the evening, the six-seat counters of Omoide Yokochō",
-     "nl": "'s Avonds de toogjes met zes plaatsen van Omoide Yokochō"
+     "nl": "'s Avonds de toogjes met zes plaatsen van Omoide Yokochō",
+     "km": "ពេលល្ងាច តុសាំងប្រាំមួយកៅអីនៃអូម៉ូអុីដេយ៉ូកូឈូ"
     }
    ],
    "tr": null,
@@ -762,42 +877,49 @@
    "date": {
     "fr": "Sam 26 sept.",
     "en": "Sat 26 Sept",
-    "nl": "Za 26 sept"
+    "nl": "Za 26 sept",
+    "km": "សៅរ៍ ២៦ កញ្ញា"
    },
    "city": "tokyo",
    "color": "#c73344",
    "place": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "lat": 35.6595,
    "lon": 139.7005,
    "title": {
     "fr": "Une forêt et un carrefour",
     "en": "A forest and a crossing",
-    "nl": "Een bos en een kruispunt"
+    "nl": "Een bos en een kruispunt",
+    "km": "ព្រៃឈើ និងចំណុចប្រសព្វ"
    },
    "items": [
     {
      "fr": "Meiji Jingū : un sanctuaire au milieu de soixante-dix hectares de forêt entièrement plantée à la main en 1920",
      "en": "Meiji Jingū: a shrine in the middle of seventy hectares of forest planted entirely by hand in 1920",
-     "nl": "Meiji Jingū: een heiligdom midden in zeventig hectare bos, in 1920 volledig met de hand aangeplant"
+     "nl": "Meiji Jingū: een heiligdom midden in zeventig hectare bos, in 1920 volledig met de hand aangeplant",
+     "km": "វត្តម៉េជីជីនហ្គូ៖ វត្តមួយកណ្តាលព្រៃចំនួនចិតសិបហិកតា ដែលដាំដោយដៃទាំងស្រុងក្នុងឆ្នាំ១៩២០"
     },
     {
      "fr": "À trois cents mètres de là, Takeshita-dōri et ses boutiques d'adolescents : le meilleur résumé de Tokyo",
      "en": "Three hundred metres away, Takeshita-dōri and its teenage shops: the best summary of Tokyo there is",
-     "nl": "Driehonderd meter verderop Takeshita-dōri met zijn tienerwinkels: de beste samenvatting van Tokio"
+     "nl": "Driehonderd meter verderop Takeshita-dōri met zijn tienerwinkels: de beste samenvatting van Tokio",
+     "km": "ចម្ងាយបីរយម៉ែត្រពីនោះ ផ្លូវតាកេស៊ីតាដូរី ជាមួយហាងសម្រាប់យុវវ័យ៖ ជាសេចក្តីសង្ខេបល្អបំផុតនៃទីក្រុងតូក្យូ"
     },
     {
      "fr": "Le carrefour de Shibuya, où trois mille personnes traversent à chaque feu",
      "en": "Shibuya crossing, where three thousand people cross at every light",
-     "nl": "Het kruispunt van Shibuya, waar bij elk licht drieduizend mensen oversteken"
+     "nl": "Het kruispunt van Shibuya, waar bij elk licht drieduizend mensen oversteken",
+     "km": "ចំណុចប្រសព្វស៊ីប៊ុយ៉ា កន្លែងដែលមនុស្សបីពាន់នាក់ដើរឆ្លងរាល់ពេលភ្លើងចាំង"
     },
     {
      "fr": "Un cours de cuisine le soir : nous préparons nos propres sushis",
      "en": "A cookery class in the evening: we make our own sushi",
-     "nl": "'s Avonds een kookles: we maken onze eigen sushi"
+     "nl": "'s Avonds een kookles: we maken onze eigen sushi",
+     "km": "ថ្នាក់ធ្វើម្ហូបនៅពេលល្ងាច៖ យើងធ្វើស៊ូស៊ីដោយខ្លួនឯង"
     }
    ],
    "tr": null,
@@ -808,32 +930,37 @@
    "date": {
     "fr": "Dim 27 sept.",
     "en": "Sun 27 Sept",
-    "nl": "Zo 27 sept"
+    "nl": "Zo 27 sept",
+    "km": "អាទិត្យ ២៧ កញ្ញា"
    },
    "city": "tokyo",
    "color": "#c73344",
    "place": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "lat": 35.7202,
    "lon": 139.7614,
    "title": {
     "fr": "Une fête de quartier et mille arcades",
     "en": "A neighbourhood festival and a thousand arcades",
-    "nl": "Een buurtfeest en duizend speelhallen"
+    "nl": "Een buurtfeest en duizend speelhallen",
+    "km": "ពិធីបុណ្យសង្កាត់ និងហាងហ្គេមរាប់ពាន់"
    },
    "items": [
     {
      "fr": "La fête annuelle du sanctuaire de Nezu, à quinze minutes à pied : un palanquin porté à l'épaule et secoué dans les ruelles, suivi par les familles du quartier",
      "en": "The annual festival of Nezu shrine, fifteen minutes away on foot: a portable shrine carried on shoulders and rocked through the lanes, followed by the neighbourhood families",
-     "nl": "Het jaarlijkse feest van het Nezu-heiligdom, vijftien minuten lopen: een draagbaar heiligdom op de schouders, schuddend door de steegjes, gevolgd door de buurtgezinnen"
+     "nl": "Het jaarlijkse feest van het Nezu-heiligdom, vijftien minuten lopen: een draagbaar heiligdom op de schouders, schuddend door de steegjes, gevolgd door de buurtgezinnen",
+     "km": "ពិធីបុណ្យប្រចាំឆ្នាំរបស់វត្តណេស៊ូ ដើរជើងចម្ងាយដប់ប្រាំនាទី៖ វត្តចល័តលើកលើស្មា ត្រូវគប់ទៅមកតាមផ្លូវតូចៗ ដោយមានគ្រួសារក្នុងសង្កាត់ដើរតាម"
     },
     {
      "fr": "Akihabara l'après-midi : huit étages de manga et de figurines d'occasion, du jeu vidéo des années 80, des murs entiers de distributeurs à capsules",
      "en": "Akihabara in the afternoon: eight floors of second-hand manga and figurines, 1980s video games, whole walls of capsule machines",
-     "nl": "Akihabara in de namiddag: acht verdiepingen tweedehands manga en figuurtjes, videospellen uit de jaren 80, hele muren vol capsuleautomaten"
+     "nl": "Akihabara in de namiddag: acht verdiepingen tweedehands manga en figuurtjes, videospellen uit de jaren 80, hele muren vol capsuleautomaten",
+     "km": "អាគីហាបារ៉ានៅរសៀល៖ ជាន់ប្រាំបីនៃម៉ង្គាកម្សាន្តនិងរូបចម្លាក់ដែលធ្លាប់ប្រើ ហ្គេមវីដេអូសម័យទសវត្សឆ្នាំ១៩៨០ ជញ្ជាំងពេញលក់ម៉ាស៊ីនស្រោបគ្រាប់"
     }
    ],
    "tr": null,
@@ -844,42 +971,49 @@
    "date": {
     "fr": "Lun 28 sept.",
     "en": "Mon 28 Sept",
-    "nl": "Ma 28 sept"
+    "nl": "Ma 28 sept",
+    "km": "ចន្ទ ២៨ កញ្ញា"
    },
    "city": "tokyo",
    "color": "#c73344",
    "place": {
     "fr": "Tokyo",
     "en": "Tokyo",
-    "nl": "Tokio"
+    "nl": "Tokio",
+    "km": "តូក្យូ"
    },
    "lat": 35.6472,
    "lon": 139.7911,
    "title": {
     "fr": "Pieds nus dans l'eau",
     "en": "Barefoot in the water",
-    "nl": "Blootsvoets in het water"
+    "nl": "Blootsvoets in het water",
+    "km": "ជើងទទេនៅក្នុងទឹក"
    },
    "items": [
     {
      "fr": "Nakameguro le matin : un canal bordé de cerisiers, des boutiques d'indépendants, des cafés",
      "en": "Nakameguro in the morning: a cherry-lined canal, independent shops, cafés",
-     "nl": "Nakameguro in de ochtend: een kanaal met kerselaars, onafhankelijke winkels, cafés"
+     "nl": "Nakameguro in de ochtend: een kanaal met kerselaars, onafhankelijke winkels, cafés",
+     "km": "ណាកាមេហ្គូរ៉ូនៅព្រឹក៖ ប្រឡាយទឹករៀបចំដោយដើមសាគូរ៉ា ហាងឯករាជ្យ ហាងកាហ្វេ"
     },
     {
      "fr": "Une librairie de Daikanyama où l'on peut s'asseoir et lire",
      "en": "A bookshop in Daikanyama where you can sit down and read",
-     "nl": "Een boekhandel in Daikanyama waar je kunt gaan zitten en lezen"
+     "nl": "Een boekhandel in Daikanyama waar je kunt gaan zitten en lezen",
+     "km": "ហាងលក់សៀវភៅនៅដៃកានយ៉ាម៉ា ដែលអាចអង្គុយអានបាន"
     },
     {
      "fr": "teamLab Planets : on laisse ses chaussures à l'entrée et on traverse pieds nus des salles inondées et des sols de miroirs",
      "en": "teamLab Planets: you leave your shoes at the door and walk barefoot through flooded rooms and mirrored floors",
-     "nl": "teamLab Planets: je laat je schoenen bij de ingang en loopt blootsvoets door ondergelopen zalen en spiegelvloeren"
+     "nl": "teamLab Planets: je laat je schoenen bij de ingang en loopt blootsvoets door ondergelopen zalen en spiegelvloeren",
+     "km": "ធីមឡាបផ្លានេត៖ ដោះស្បែកជើងទុកមុខទ្វារ ហើយដើរជើងទទេកាត់ក្នុងបន្ទប់ដែលពេញទឹក និងលើឥដ្ឋកញ្ចក់"
     },
     {
      "fr": "Le dîner d'adieu",
      "en": "The farewell dinner",
-     "nl": "Het afscheidsdiner"
+     "nl": "Het afscheidsdiner",
+     "km": "អាហារពេលល្ងាចលាគ្នា"
     }
    ],
    "tr": null,
@@ -890,37 +1024,43 @@
    "date": {
     "fr": "Mar 29 sept.",
     "en": "Tue 29 Sept",
-    "nl": "Di 29 sept"
+    "nl": "Di 29 sept",
+    "km": "អង្គារ ២៩ កញ្ញា"
    },
    "city": "vol",
    "color": "#6b6a75",
    "place": {
     "fr": "Vol",
     "en": "Flight",
-    "nl": "Vlucht"
+    "nl": "Vlucht",
+    "km": "ជើងហោះហើរ"
    },
    "lat": 35.7719,
    "lon": 140.3929,
    "title": {
     "fr": "Le retour",
     "en": "The journey home",
-    "nl": "De terugreis"
+    "nl": "De terugreis",
+    "km": "ការវិលត្រឡប់មកវិញ"
    },
    "items": [
     {
      "fr": "Dernière matinée libre et un dernier bol de ramen",
      "en": "A last free morning and a final bowl of ramen",
-     "nl": "Een laatste vrije ochtend en een laatste kom ramen"
+     "nl": "Een laatste vrije ochtend en een laatste kom ramen",
+     "km": "ព្រឹកទំនេរចុងក្រោយ និងចានរ៉ាម៉ិនចុងក្រោយ"
     },
     {
      "fr": "Train express vers l'aéroport de Narita en fin d'après-midi",
      "en": "Express train to Narita airport in the late afternoon",
-     "nl": "Sneltrein naar de luchthaven van Narita in de late namiddag"
+     "nl": "Sneltrein naar de luchthaven van Narita in de late namiddag",
+     "km": "រថភ្លើងលឿនទៅព្រលានយន្តហោះណារីតានៅចុងបញ្ចប់រសៀល"
     },
     {
      "fr": "Décollage à 21h15, escale à Istanbul, atterrissage à Lyon le 30 au matin",
      "en": "Take-off at 21:15, a stopover in Istanbul, landing in Lyon on the morning of the 30th",
-     "nl": "Vertrek om 21.15 uur, overstap in Istanbul, landing in Lyon op de ochtend van de 30e"
+     "nl": "Vertrek om 21.15 uur, overstap in Istanbul, landing in Lyon op de ochtend van de 30e",
+     "km": "ហោះហើរនៅម៉ោង២១:១៥ ចតឈប់នៅអ៊ីស្តង់ប៊ុល ចុះចតនៅលីយ៉ុងនៅព្រឹកថ្ងៃទី៣០"
     }
    ],
    "tr": null,

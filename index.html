@@ -55,6 +55,7 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .wrap{max-width:960px;margin:0 auto;padding:18px 16px 60px}
 .welcome{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:13px 16px;margin-bottom:16px;font-style:italic;font-size:.9rem;color:var(--ink2);display:none}
+.howto{font-family:ui-sans-serif,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--line2);border-radius:10px;padding:11px 14px;margin-bottom:16px;font-size:.8rem;line-height:1.5;color:var(--ink2);display:none}
 #map{width:100%;height:64vh;min-height:360px;border-radius:13px;border:1px solid var(--line)}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin:14px 0 22px;font-family:ui-sans-serif,sans-serif;font-size:.78rem;color:var(--ink2)}
 .legend span{display:flex;align-items:center;gap:6px}
@@ -110,6 +111,7 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
 </header>
 <div class="wrap">
   <p class="welcome" id="c-welcome"></p>
+  <p class="howto" id="c-howto"></p>
   <div id="map"></div>
   <div class="legend" id="legend"></div>
   <div class="sectitle" id="sec-days"></div>
@@ -223,6 +225,11 @@ function renderHeader(){
   const welcomeText = DATA.trip.welcome && DATA.trip.welcome[lang];
   welcomeEl.textContent = welcomeText || '';
   welcomeEl.style.display = welcomeText ? 'block' : 'none';
+
+  const howtoEl = document.getElementById('c-howto');
+  const howtoText = DATA.trip.howto && DATA.trip.howto[lang];
+  howtoEl.textContent = howtoText || '';
+  howtoEl.style.display = howtoText ? 'block' : 'none';
 }
 
 function renderLegend(){

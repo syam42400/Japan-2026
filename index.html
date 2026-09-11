@@ -208,8 +208,9 @@ function renderHeader(){
   document.documentElement.lang = lang;
   document.getElementById('c-title').textContent = DATA.trip.title[lang];
   document.getElementById('c-sub').textContent = DATA.trip.sub[lang];
+  const flags = {fr:'🇫🇷', en:'🇬🇧', nl:'🇳🇱', km:'🇰🇭'};
   document.getElementById('langbar').innerHTML = ['fr','en','nl','km']
-    .map(l => `<button type="button" data-l="${l}" aria-pressed="${l===lang}">${l.toUpperCase()}</button>`).join('');
+    .map(l => `<button type="button" data-l="${l}" aria-pressed="${l===lang}">${flags[l]} ${l.toUpperCase()}</button>`).join('');
   document.querySelectorAll('#langbar button').forEach(b => b.onclick = () => { lang = b.dataset.l; renderAll(); });
   document.getElementById('foot').textContent = UI[lang].foot;
   document.getElementById('sec-days').textContent = UI[lang].days;

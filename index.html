@@ -77,6 +77,9 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .popupbox li::before{content:"—";position:absolute;left:0;color:#999}
 .popupbox .pnote{margin-top:9px;padding:7px 10px;background:#f4f1ea;border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-style:italic;font-size:.8rem;color:#3a3a3a}
 .sectitle{font-family:ui-sans-serif,sans-serif;font-size:.85rem;font-weight:700;color:var(--muted);margin:26px 0 10px;text-transform:uppercase;letter-spacing:.5px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;cursor:pointer;border:1px solid var(--line);display:block}
+.gallery-empty{font-family:ui-sans-serif,sans-serif;font-size:.82rem;color:var(--muted);font-style:italic}
 footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;line-height:1.6;text-align:center}
 .leaflet-popup-content-wrapper{border-radius:10px}
 .ppics{display:flex;gap:5px;margin-top:9px;flex-wrap:wrap}
@@ -116,6 +119,8 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
   <div class="legend" id="legend"></div>
   <div class="sectitle" id="sec-days"></div>
   <div id="daylist"></div>
+  <div class="sectitle" id="sec-photos"></div>
+  <div class="gallery" id="gallery"></div>
   <footer id="foot"></footer>
 </div>
 
@@ -132,16 +137,16 @@ html[lang="km"] footer,html[lang="km"] #lightbox .lb-cap{font-family:'Noto Sans 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script>
 const UI = {
-  fr:{loading:'Chargement de la carte…', days:'Jour par jour', foot:'Carte personnelle sans compte ni inscription — hébergée en statique.',
+  fr:{loading:'Chargement de la carte…', days:'Jour par jour', photos:'Toutes les photos', noPhotos:'Les photos arriveront au fur et à mesure du voyage.', foot:'Carte personnelle sans compte ni inscription — hébergée en statique.',
       share:'Partager', shareCopied:'Lien copié !', today:"· aujourd'hui",
       stats:(d,km,ph)=>`${d} jours · ${km} km à vol d'oiseau · ${ph} photo${ph>1?'s':''}`},
-  en:{loading:'Loading the map…', days:'Day by day', foot:'A personal map with no account and no sign-up — static hosting.',
+  en:{loading:'Loading the map…', days:'Day by day', photos:'All photos', noPhotos:'Photos will be added as the trip goes on.', foot:'A personal map with no account and no sign-up — static hosting.',
       share:'Share', shareCopied:'Link copied!', today:'· today',
       stats:(d,km,ph)=>`${d} days · ${km} km as the crow flies · ${ph} photo${ph>1?'s':''}`},
-  nl:{loading:'Kaart laden…', days:'Dag per dag', foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost.',
+  nl:{loading:'Kaart laden…', days:'Dag per dag', photos:"Alle foto's", noPhotos:"De foto's worden geleidelijk toegevoegd tijdens de reis.", foot:'Een persoonlijke kaart zonder account of inschrijving — statisch gehost.',
       share:'Delen', shareCopied:'Link gekopieerd!', today:'· vandaag',
       stats:(d,km,ph)=>`${d} dagen · ${km} km in vogelvlucht · ${ph} foto${ph>1?"'s":''}`},
-  km:{loading:'កំពុងផ្ទុកផែនទី…', days:'ថ្ងៃម្តងៗ', foot:'ផែនទីផ្ទាល់ខ្លួន គ្មានតម្រូវឱ្យបង្កើតគណនី ឬចុះឈ្មោះ — បង្ហោះជាគេហទំព័រឋិតិវន្ត។',
+  km:{loading:'កំពុងផ្ទុកផែនទី…', days:'ថ្ងៃម្តងៗ', photos:'រូបថតទាំងអស់', noPhotos:'រូបថតនឹងត្រូវបានបន្ថែមបន្តិចម្តងៗពេលធ្វើដំណើរ។', foot:'ផែនទីផ្ទាល់ខ្លួន គ្មានតម្រូវឱ្យបង្កើតគណនី ឬចុះឈ្មោះ — បង្ហោះជាគេហទំព័រឋិតិវន្ត។',
       share:'ចែករំលែក', shareCopied:'បានចម្លងតំណភ្ជាប់!', today:'· ថ្ងៃនេះ',
       stats:(d,km,ph)=>`${d} ថ្ងៃ · ${km} គីឡូម៉ែត្រ តាមបន្ទាត់ត្រង់ · ${ph} រូបថត`}
 };
@@ -214,6 +219,7 @@ function renderHeader(){
   document.querySelectorAll('#langbar button').forEach(b => b.onclick = () => { lang = b.dataset.l; renderAll(); });
   document.getElementById('foot').textContent = UI[lang].foot;
   document.getElementById('sec-days').textContent = UI[lang].days;
+  document.getElementById('sec-photos').textContent = UI[lang].photos;
   document.getElementById('share-label').textContent = UI[lang].share;
 
   const totalKm = DATA.points.slice(1).reduce((sum, p, i) =>
@@ -256,6 +262,17 @@ function renderDayList(){
   });
 }
 
+function renderGallery(){
+  const galleryEl = document.getElementById('gallery');
+  const items = [];
+  DATA.points.forEach((p, idx) => {
+    (p.photos || []).forEach((src, pi) => items.push({src, idx, pi}));
+  });
+  galleryEl.innerHTML = items.length
+    ? items.map(it => `<img src="${esc(it.src)}" loading="lazy" onclick="openLightbox(${it.idx},${it.pi})" alt="">`).join('')
+    : `<p class="gallery-empty">${esc(UI[lang].noPhotos)}</p>`;
+}
+
 function renderMarkers(){
   DATA.points.forEach((p, idx) => {
     markers[idx].setPopupContent(popupHtml(p, idx));
@@ -295,6 +312,7 @@ function renderAll(){
   renderLegend();
   renderDayList();
   renderMarkers();
+  renderGallery();
 }
 
 let lb = {pointIdx:null, photoIdx:0};

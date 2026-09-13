@@ -281,59 +281,6 @@
     "nl": "Ma 14 sept",
     "km": "ចន្ទ ១៤ កញ្ញា"
    },
-   "city": "kyoto",
-   "color": "#9257b2",
-   "place": {
-    "fr": "Kyoto",
-    "en": "Kyoto",
-    "nl": "Kyoto",
-    "km": "ក្យូតូ"
-   },
-   "lat": 34.9929,
-   "lon": 135.785,
-   "title": {
-    "fr": "Le Kyoto des cartes postales",
-    "en": "Postcard Kyoto",
-    "nl": "Het Kyoto van de ansichtkaarten",
-    "km": "ក្យូតូដូចក្នុងបណ្ណប្រៃសណីយ៍"
-   },
-   "items": [
-    {
-     "fr": "Kiyomizu-dera et sa terrasse de bois sur pilotis, montée sans un seul clou",
-     "en": "Kiyomizu-dera and its wooden stilted terrace, built without a single nail",
-     "nl": "Kiyomizu-dera met zijn houten terras op palen, gebouwd zonder één spijker",
-     "km": "វត្តគីយ៉ូមីស៊ូជិ ជាមួយកម្រាលឈើលើសសរដែលសាងសង់ដោយគ្មានដែកគោលមួយសោះ"
-    },
-    {
-     "fr": "Descente par Sannenzaka et Ninenzaka, deux ruelles pavées bordées de maisons basses",
-     "en": "Down through Sannenzaka and Ninenzaka, two cobbled lanes lined with low houses",
-     "nl": "Afdaling via Sannenzaka en Ninenzaka, twee geplaveide steegjes met lage huizen",
-     "km": "ចុះតាមផ្លូវសាណិនហ្សាកា និងនីនិនហ្សាកា ជាផ្លូវក្រាលថ្មពីរស្ថិតនៅតាមផ្ទះទាបៗ"
-    },
-    {
-     "fr": "Le Chemin des philosophes : deux kilomètres le long d'un canal, jusqu'au Pavillon d'argent",
-     "en": "The Philosopher's Path: two kilometres along a canal to the Silver Pavilion",
-     "nl": "Het Filosofenpad: twee kilometer langs een kanaal tot aan het Zilveren Paviljoen",
-     "km": "ផ្លូវរបស់អ្នកទស្សនវិទូ៖ ចម្ងាយពីរគីឡូម៉ែត្រតាមប្រឡាយទឹកទៅដល់វិមានប្រាក់"
-    },
-    {
-     "fr": "Peut-être une cérémonie du thé en fin d'après-midi",
-     "en": "Perhaps a tea ceremony in the late afternoon",
-     "nl": "Misschien een theeceremonie in de late namiddag",
-     "km": "ប្រហែលជាមានពិធីតែនៅចុងបញ្ចប់រសៀល"
-    }
-   ],
-   "tr": null,
-   "photos": []
-  },
-  {
-   "n": 5,
-   "date": {
-    "fr": "Mar 15 sept.",
-    "en": "Tue 15 Sept",
-    "nl": "Di 15 sept",
-    "km": "អង្គារ ១៥ កញ្ញា"
-   },
    "city": "nara",
    "color": "#00876f",
    "place": {
@@ -374,6 +321,59 @@
      "en": "Tōdai-ji: a fifteen-metre bronze Buddha, cast in the 8th century, under a colossal timber frame",
      "nl": "Tōdai-ji: een bronzen Boeddha van vijftien meter uit de 8e eeuw, onder een kolossaal houten dak",
      "km": "វត្តតូដៃជិ៖ ព្រះពុទ្ធរូបលង្ហិនកម្ពស់ដប់ប្រាំម៉ែត្រ ចាក់ពីសតវត្សទី៨ ក្រោមរចនាសម្ព័ន្ធឈើដ៏ធំសម្បើម"
+    }
+   ],
+   "tr": null,
+   "photos": []
+  },
+  {
+   "n": 5,
+   "date": {
+    "fr": "Mar 15 sept.",
+    "en": "Tue 15 Sept",
+    "nl": "Di 15 sept",
+    "km": "អង្គារ ១៥ កញ្ញា"
+   },
+   "city": "kyoto",
+   "color": "#9257b2",
+   "place": {
+    "fr": "Kyoto",
+    "en": "Kyoto",
+    "nl": "Kyoto",
+    "km": "ក្យូតូ"
+   },
+   "lat": 34.9929,
+   "lon": 135.785,
+   "title": {
+    "fr": "Le Kyoto des cartes postales",
+    "en": "Postcard Kyoto",
+    "nl": "Het Kyoto van de ansichtkaarten",
+    "km": "ក្យូតូដូចក្នុងបណ្ណប្រៃសណីយ៍"
+   },
+   "items": [
+    {
+     "fr": "Kiyomizu-dera et sa terrasse de bois sur pilotis, montée sans un seul clou",
+     "en": "Kiyomizu-dera and its wooden stilted terrace, built without a single nail",
+     "nl": "Kiyomizu-dera met zijn houten terras op palen, gebouwd zonder één spijker",
+     "km": "វត្តគីយ៉ូមីស៊ូជិ ជាមួយកម្រាលឈើលើសសរដែលសាងសង់ដោយគ្មានដែកគោលមួយសោះ"
+    },
+    {
+     "fr": "Descente par Sannenzaka et Ninenzaka, deux ruelles pavées bordées de maisons basses",
+     "en": "Down through Sannenzaka and Ninenzaka, two cobbled lanes lined with low houses",
+     "nl": "Afdaling via Sannenzaka en Ninenzaka, twee geplaveide steegjes met lage huizen",
+     "km": "ចុះតាមផ្លូវសាណិនហ្សាកា និងនីនិនហ្សាកា ជាផ្លូវក្រាលថ្មពីរស្ថិតនៅតាមផ្ទះទាបៗ"
+    },
+    {
+     "fr": "Le Chemin des philosophes : deux kilomètres le long d'un canal, jusqu'au Pavillon d'argent",
+     "en": "The Philosopher's Path: two kilometres along a canal to the Silver Pavilion",
+     "nl": "Het Filosofenpad: twee kilometer langs een kanaal tot aan het Zilveren Paviljoen",
+     "km": "ផ្លូវរបស់អ្នកទស្សនវិទូ៖ ចម្ងាយពីរគីឡូម៉ែត្រតាមប្រឡាយទឹកទៅដល់វិមានប្រាក់"
+    },
+    {
+     "fr": "Peut-être une cérémonie du thé en fin d'après-midi",
+     "en": "Perhaps a tea ceremony in the late afternoon",
+     "nl": "Misschien een theeceremonie in de late namiddag",
+     "km": "ប្រហែលជាមានពិធីតែនៅចុងបញ្ចប់រសៀល"
     }
    ],
    "tr": null,

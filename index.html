@@ -78,6 +78,7 @@ h1{font-size:clamp(1.4rem,4.2vw,2rem);font-weight:600;line-height:1.15;letter-sp
 .dayrow .dt{flex:1;min-width:0}
 .dayrow .t{display:block;font-weight:600;font-size:.94rem}
 .dayrow .d{display:block;font-size:.74rem;color:var(--muted);font-family:ui-sans-serif,sans-serif;margin-top:1px}
+.dayrow .rownote{display:block;margin-top:6px;padding:6px 9px;background:#f4f1ea;border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-style:italic;font-size:.8rem;color:#3a3a3a;white-space:normal}
 .popupbox{font-family:ui-sans-serif,-apple-system,sans-serif;max-width:230px}
 .popupbox h3{font-family:ui-serif,Georgia,serif;font-size:.98rem;margin:2px 0 2px;color:#222}
 .popupbox .pd{font-size:.72rem;font-weight:700;letter-spacing:.4px;color:var(--gold);margin-bottom:6px}
@@ -392,6 +393,7 @@ function renderDayList(){
       <span class="dt">
         <span class="t">${esc(p.title[lang])}${p.note && p.note[lang] ? `<span class="pcount">💬</span>` : ''}${p.photos && p.photos.length ? `<span class="pcount">📷 ${p.photos.length}</span>` : ''}</span>
         <span class="d">${esc(p.date[lang])} · ${esc(p.place[lang])}${idx===todayIdx?` <span class="today-tag">${UI[lang].today}</span>`:''}</span>
+        ${p.note && p.note[lang] ? `<span class="rownote">${esc(p.note[lang])}</span>` : ''}
       </span>
       <button type="button" class="likebtn${likedDays.has(p.n)?' liked':''}" data-day="${p.n}" title="${esc(UI[lang].like)}">
         <span class="lh">${likedDays.has(p.n) ? '❤️' : '🤍'}</span>

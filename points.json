@@ -1066,35 +1066,35 @@
    "lat": 35.7148,
    "lon": 139.7967,
    "title": {
-    "fr": "Le temple et les lutteurs",
-    "en": "The temple and the wrestlers",
-    "nl": "De tempel en de worstelaars",
-    "km": "វត្ត និងអ្នកចំបាប់ស៊ូម៉ូ"
+    "fr": "La rue des couteaux",
+    "en": "Knife street",
+    "nl": "Messenstraat",
+    "km": "ផ្លូវកាំបិត"
    },
    "items": [
     {
-     "fr": "Sensō-ji au petit matin, avant que la rue Nakamise ne se remplisse",
-     "en": "Sensō-ji at first light, before Nakamise street fills up",
-     "nl": "Sensō-ji in de vroege ochtend, voordat de Nakamise-straat volloopt",
-     "km": "វត្តសិនសូជិនៅព្រឹកព្រលឹម មុនផ្លូវណាកាមីសេពោរពេញទៅដោយមនុស្ស"
+     "fr": "Kappabashi-dōri, la rue des ustensiles de cuisine : plats factices en plastique, vaisselle et couteaux japonais forgés à la main",
+     "en": "Kappabashi-dōri, kitchenware street: fake plastic dishes, tableware and hand-forged Japanese knives",
+     "nl": "Kappabashi-dōri, de keukengerei-straat: nepgerechten in plastic, servies en met de hand gesmede Japanse messen",
+     "km": "កាប៉ាបាស៊ីដូរី ផ្លូវឧបករណ៍ផ្ទះបាយ៖ ចានក្លែងក្លាយធ្វើពីប្លាស្ទិក ចាន និងកាំបិតជប៉ុនធ្វើដោយដៃ"
     },
     {
-     "fr": "Peut-être le tournoi de sumo de septembre : les lutteurs de première division entrent vers 15h40 en tabliers brodés",
-     "en": "Perhaps the September sumo tournament: the top-division wrestlers enter around 15:40 in embroidered aprons",
-     "nl": "Misschien het sumotoernooi van september: de worstelaars uit de hoogste divisie komen rond 15.40 uur op in geborduurde schorten",
-     "km": "ប្រហែលជាមានការប្រកួតស៊ូម៉ូខែកញ្ញា៖ អ្នកចំបាប់ស៊ូម៉ូថ្នាក់កំពូលចូលមកប្រហែលម៉ោង១៥:៤០ ស្លៀកខោអាវប៉ាក់ដេរ"
+     "fr": "Essayage de kimono gratuit au centre touristique de Kyōbashi",
+     "en": "Free kimono fitting at the Kyōbashi tourist information centre",
+     "nl": "Gratis kimono passen bij het toeristencentrum van Kyōbashi",
+     "km": "សាកសម្លៀកបំពាក់គីម៉ូណូឥតគិតថ្លៃនៅមណ្ឌលទេសចរណ៍ក្យូបាស៊ី"
     },
     {
-     "fr": "Shinjuku au coucher du soleil : l'observatoire gratuit au quarante-cinquième étage de l'hôtel de ville",
-     "en": "Shinjuku at sunset: the free observation deck on the 45th floor of the city hall",
-     "nl": "Shinjuku bij zonsondergang: het gratis uitkijkplatform op de 45e verdieping van het stadhuis",
-     "km": "ស៊ីនជូគូនៅពេលថ្ងៃលិច៖ ទីតាំងសម្លឹងមើលឥតគិតថ្លៃនៅជាន់ទី៤៥ នៃសាលាក្រុង"
+     "fr": "Pokémon Center Tokyo DX, entre Ginza et Nihonbashi",
+     "en": "Pokémon Center Tokyo DX, between Ginza and Nihonbashi",
+     "nl": "Pokémon Center Tokyo DX, tussen Ginza en Nihonbashi",
+     "km": "Pokémon Center Tokyo DX ចន្លោះហ្គីនហ្សា និងនីហុនបាស៊ី"
     },
     {
-     "fr": "Le soir, les comptoirs de six places d'Omoide Yokochō",
-     "en": "In the evening, the six-seat counters of Omoide Yokochō",
-     "nl": "'s Avonds de toogjes met zes plaatsen van Omoide Yokochō",
-     "km": "ពេលល្ងាច តុសាំងប្រាំមួយកៅអីនៃអូម៉ូអុីដេយ៉ូកូឈូ"
+     "fr": "Les couteaux repartiront en soute — plus question de les garder en cabine",
+     "en": "The knives go home in the checked luggage — no way they're making it into the cabin",
+     "nl": "De messen gaan mee in de ruimbagage — geen denken aan handbagage",
+     "km": "កាំបិតត្រូវដាក់ក្នុងកាបូបផ្ទុកនៅពេលត្រឡប់ — លែងអាចយកទៅក្នុងយន្តហោះបានទៀតហើយ"
     }
    ],
    "tr": null,
@@ -1132,35 +1132,41 @@
    "lat": 35.6595,
    "lon": 139.7005,
    "title": {
-    "fr": "Une forêt et un carrefour",
-    "en": "A forest and a crossing",
-    "nl": "Een bos en een kruispunt",
-    "km": "ព្រៃឈើ និងចំណុចប្រសព្វ"
+    "fr": "Shopping sous la pluie",
+    "en": "Shopping in the rain",
+    "nl": "Shoppen in de regen",
+    "km": "ទិញឥវ៉ាន់ក្រោមភ្លៀង"
    },
    "items": [
     {
-     "fr": "Meiji Jingū : un sanctuaire au milieu de soixante-dix hectares de forêt entièrement plantée à la main en 1920",
-     "en": "Meiji Jingū: a shrine in the middle of seventy hectares of forest planted entirely by hand in 1920",
-     "nl": "Meiji Jingū: een heiligdom midden in zeventig hectare bos, in 1920 volledig met de hand aangeplant",
-     "km": "វត្តម៉េជីជីនហ្គូ៖ វត្តមួយកណ្តាលព្រៃចំនួនចិតសិបហិកតា ដែលដាំដោយដៃទាំងស្រុងក្នុងឆ្នាំ១៩២០"
+     "fr": "Takeshita-dōri sous la pluie : capsule toys, cosmétiques et grandes enseignes japonaises",
+     "en": "Takeshita-dōri in the rain: capsule toys, cosmetics and big Japanese brands",
+     "nl": "Takeshita-dōri in de regen: capsuleautomaten, cosmetica en grote Japanse merken",
+     "km": "តាកេស៊ីតាដូរីក្រោមភ្លៀង៖ ម៉ាស៊ីនកែសុល គ្រឿងសំអាង និងម៉ាកជប៉ុនធំៗ"
     },
     {
-     "fr": "À trois cents mètres de là, Takeshita-dōri et ses boutiques d'adolescents : le meilleur résumé de Tokyo",
-     "en": "Three hundred metres away, Takeshita-dōri and its teenage shops: the best summary of Tokyo there is",
-     "nl": "Driehonderd meter verderop Takeshita-dōri met zijn tienerwinkels: de beste samenvatting van Tokio",
-     "km": "ចម្ងាយបីរយម៉ែត្រពីនោះ ផ្លូវតាកេស៊ីតាដូរី ជាមួយហាងសម្រាប់យុវវ័យ៖ ជាសេចក្តីសង្ខេបល្អបំផុតនៃទីក្រុងតូក្យូ"
+     "fr": "Onitsuka Tiger et Uniqlo à Omotesandō, à l'abri sous les arcades",
+     "en": "Onitsuka Tiger and Uniqlo in Omotesandō, sheltered under the arcades",
+     "nl": "Onitsuka Tiger en Uniqlo in Omotesandō, beschut onder de arcades",
+     "km": "Onitsuka Tiger និង Uniqlo នៅអូម៉ូតេសាន់ដូ ជម្រកក្រោមផ្លូវដើរ"
     },
     {
-     "fr": "Le carrefour de Shibuya, où trois mille personnes traversent à chaque feu",
-     "en": "Shibuya crossing, where three thousand people cross at every light",
-     "nl": "Het kruispunt van Shibuya, waar bij elk licht drieduizend mensen oversteken",
-     "km": "ចំណុចប្រសព្វស៊ីប៊ុយ៉ា កន្លែងដែលមនុស្សបីពាន់នាក់ដើរឆ្លងរាល់ពេលភ្លើងចាំង"
+     "fr": "adidas Shibuya : personnalisation de t-shirt à l'impression",
+     "en": "adidas Shibuya: custom-printed t-shirts",
+     "nl": "adidas Shibuya: t-shirts met eigen bedrukking",
+     "km": "adidas ស៊ីប៊ុយ៉ា៖ អាវយឺតបោះពុម្ពតាមបំណង"
     },
     {
-     "fr": "Un cours de cuisine le soir : nous préparons nos propres sushis",
-     "en": "A cookery class in the evening: we make our own sushi",
-     "nl": "'s Avonds een kookles: we maken onze eigen sushi",
-     "km": "ថ្នាក់ធ្វើម្ហូបនៅពេលល្ងាច៖ យើងធ្វើស៊ូស៊ីដោយខ្លួនឯង"
+     "fr": "Shibuya Parco, six étages de paradis geek : Nintendo Tokyo, Pokémon Center, Capcom et Sega",
+     "en": "Shibuya Parco, six floors of geek heaven: Nintendo Tokyo, Pokémon Center, Capcom and Sega",
+     "nl": "Shibuya Parco, zes verdiepingen geekparadijs: Nintendo Tokyo, Pokémon Center, Capcom en Sega",
+     "km": "Shibuya Parco ជាន់ប្រាំមួយនៃឋានសួគ៌អ្នកនិយមហ្គេម៖ Nintendo Tokyo, Pokémon Center, Capcom និង Sega"
+    },
+    {
+     "fr": "Le carrefour de Shibuya, si la pluie laisse un répit",
+     "en": "Shibuya crossing, if the rain gives us a break",
+     "nl": "Het kruispunt van Shibuya, als de regen even pauzeert",
+     "km": "ផ្លូវឆ្លងកាត់ស៊ីប៊ុយ៉ា ប្រសិនបើភ្លៀងឈប់បន្តិច"
     }
    ],
    "tr": null,
@@ -1216,10 +1222,34 @@
      "km": "ពិធីបុណ្យប្រចាំឆ្នាំរបស់វត្តណេស៊ូ ដើរជើងចម្ងាយដប់ប្រាំនាទី៖ វត្តចល័តលើកលើស្មា ត្រូវគប់ទៅមកតាមផ្លូវតូចៗ ដោយមានគ្រួសារក្នុងសង្កាត់ដើរតាម"
     },
     {
+     "fr": "Kanda Myōjin et ses plaquettes à vœux illustrées de personnages d'anime",
+     "en": "Kanda Myōjin and its wish plaques illustrated with anime characters",
+     "nl": "Kanda Myōjin en zijn wensplaatjes met anime-personages",
+     "km": "កាន់ដាមីយ៉ូជីន និងបន្ទះសរសេរបំណងប្រាថ្នាគូររូបតួអង្គអានីម៉េ"
+    },
+    {
      "fr": "Akihabara l'après-midi : huit étages de manga et de figurines d'occasion, du jeu vidéo des années 80, des murs entiers de distributeurs à capsules",
      "en": "Akihabara in the afternoon: eight floors of second-hand manga and figurines, 1980s video games, whole walls of capsule machines",
      "nl": "Akihabara in de namiddag: acht verdiepingen tweedehands manga en figuurtjes, videospellen uit de jaren 80, hele muren vol capsuleautomaten",
      "km": "អាគីហាបារ៉ានៅរសៀល៖ ជាន់ប្រាំបីនៃម៉ង្គាកម្សាន្តនិងរូបចម្លាក់ដែលធ្លាប់ប្រើ ហ្គេមវីដេអូសម័យទសវត្សឆ្នាំ១៩៨០ ជញ្ជាំងពេញលក់ម៉ាស៊ីនស្រោបគ្រាប់"
+    },
+    {
+     "fr": "MIZUNO TOKYO, le magasin amiral sur huit étages",
+     "en": "MIZUNO TOKYO, the eight-storey flagship store",
+     "nl": "MIZUNO TOKYO, de vlaggenschipwinkel over acht verdiepingen",
+     "km": "MIZUNO TOKYO ហាងសំខាន់ប្រាំបីជាន់"
+    },
+    {
+     "fr": "L'observatoire gratuit de la mairie de Tokyo, avec une projection Pokémon en soirée",
+     "en": "Tokyo City Hall's free observatory, with a Pokémon projection in the evening",
+     "nl": "Het gratis observatieplatform van het Tokiose stadhuis, met 's avonds een Pokémon-projectie",
+     "km": "ទីតាំងសម្លឹងមើលឥតគិតថ្លៃនៃសាលាក្រុងតូក្យូ ជាមួយបាំងបញ្ចាំងរូបភាព Pokémon ពេលល្ងាច"
+    },
+    {
+     "fr": "Un sento du quartier pour finir, et un dîner sur place",
+     "en": "A neighbourhood sento to finish, with dinner on site",
+     "nl": "Een buurtsento om af te sluiten, met avondeten ter plaatse",
+     "km": "ចប់ដោយអាងងូតទឹកសាធារណៈក្នុងសង្កាត់ ព្រមទាំងអាហារល្ងាចនៅទីនោះ"
     }
    ],
    "tr": null,
@@ -1244,29 +1274,35 @@
    "lat": 35.6472,
    "lon": 139.7911,
    "title": {
-    "fr": "Pieds nus dans l'eau",
-    "en": "Barefoot in the water",
-    "nl": "Blootsvoets in het water",
-    "km": "ជើងទទេនៅក្នុងទឹក"
+    "fr": "La forêt sacrée et les mondes sans limites",
+    "en": "The sacred forest and the boundless worlds",
+    "nl": "Het heilige bos en de grenzeloze werelden",
+    "km": "ព្រៃបរិសុទ្ធ និងពិភពគ្មានព្រំដែន"
    },
    "items": [
     {
-     "fr": "Nakameguro le matin : un canal bordé de cerisiers, des boutiques d'indépendants, des cafés",
-     "en": "Nakameguro in the morning: a cherry-lined canal, independent shops, cafés",
-     "nl": "Nakameguro in de ochtend: een kanaal met kerselaars, onafhankelijke winkels, cafés",
-     "km": "ណាកាមេហ្គូរ៉ូនៅព្រឹក៖ ប្រឡាយទឹករៀបចំដោយដើមសាគូរ៉ា ហាងឯករាជ្យ ហាងកាហ្វេ"
+     "fr": "Meiji Jingū au petit matin : un sanctuaire au milieu de soixante-dix hectares de forêt entièrement plantée à la main en 1920",
+     "en": "Meiji Jingū at first light: a shrine in the middle of seventy hectares of forest planted entirely by hand in 1920",
+     "nl": "Meiji Jingū vroeg in de ochtend: een heiligdom midden in zeventig hectare bos, in 1920 volledig met de hand aangeplant",
+     "km": "វត្តម៉េជីជីនហ្គូនៅព្រឹកព្រលឹម៖ វត្តមួយកណ្តាលព្រៃចំនួនចិតសិបហិកតា ដែលដាំដោយដៃទាំងស្រុងក្នុងឆ្នាំ១៩២០"
     },
     {
-     "fr": "Une librairie de Daikanyama où l'on peut s'asseoir et lire",
-     "en": "A bookshop in Daikanyama where you can sit down and read",
-     "nl": "Een boekhandel in Daikanyama waar je kunt gaan zitten en lezen",
-     "km": "ហាងលក់សៀវភៅនៅដៃកានយ៉ាម៉ា ដែលអាចអង្គុយអានបាន"
+     "fr": "Nakameguro : une balade le long du canal bordé de cerisiers",
+     "en": "Nakameguro: a stroll along the cherry-lined canal",
+     "nl": "Nakameguro: een wandeling langs het kanaal met kerselaars",
+     "km": "ណាកាមេហ្គូរ៉ូ៖ ដើរលេងតាមប្រឡាយទឹករៀបចំដោយដើមសាគូរ៉ា"
     },
     {
-     "fr": "teamLab Planets : on laisse ses chaussures à l'entrée et on traverse pieds nus des salles inondées et des sols de miroirs",
-     "en": "teamLab Planets: you leave your shoes at the door and walk barefoot through flooded rooms and mirrored floors",
-     "nl": "teamLab Planets: je laat je schoenen bij de ingang en loopt blootsvoets door ondergelopen zalen en spiegelvloeren",
-     "km": "ធីមឡាបផ្លានេត៖ ដោះស្បែកជើងទុកមុខទ្វារ ហើយដើរជើងទទេកាត់ក្នុងបន្ទប់ដែលពេញទឹក និងលើឥដ្ឋកញ្ចក់"
+     "fr": "Daikanyama T-Site, la librairie Tsutaya où l'on peut s'asseoir et lire",
+     "en": "Daikanyama T-Site, the Tsutaya bookshop where you can sit down and read",
+     "nl": "Daikanyama T-Site, de Tsutaya-boekhandel waar je kunt gaan zitten en lezen",
+     "km": "ដៃកានយ៉ាម៉ា T-Site ហាងសៀវភៅសុតាយ៉ា ដែលអាចអង្គុយអានបាន"
+    },
+    {
+     "fr": "teamLab Borderless à Azabudai Hills : des œuvres numériques sans limites entre les salles",
+     "en": "teamLab Borderless at Azabudai Hills: digital artworks with no boundaries between the rooms",
+     "nl": "teamLab Borderless in Azabudai Hills: digitale kunstwerken zonder grenzen tussen de zalen",
+     "km": "teamLab Borderless នៅ Azabudai Hills៖ សិល្បៈឌីជីថលគ្មានព្រំដែនរវាងបន្ទប់"
     },
     {
      "fr": "Le dîner d'adieu",
